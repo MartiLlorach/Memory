@@ -1,11 +1,13 @@
 var flipped = 0;
 
 function flip(card){
+	if (flipped >= 2){return}
 	if (card.getAttribute('state')=='unfliped'){
 		card.firstElementChild.setAttribute('src','../images/cruz.jpg');
 		card.setAttribute('state', 'flipped');
-		flipped += 1;
-	}
+	  card.setAttribute('state', 'flipped');
+		flipped++;
+  }
 	if (flipped==2){
 		flippedC = document.querySelectorAll('[state="flipped"]');
 		if (flippedC[0].getAttribute('name') == flippedC[1].getAttribute('name')){
