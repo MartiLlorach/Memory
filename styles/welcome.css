@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+.main {
+	display: flex;
+	flex-direction: column;
+}
+.logo{
+	margin: 50px auto;
+	-webkit-text-stroke: 2px #A239CA; 
+	font-family: 'ZCOOL KuaiLe', cursive;
+	font-size: 70px;
+	background-image: url("../images/logo-background.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.bottom-row{
+	display:  flex;
+	flex-direction: row;
+}
+.btn{
+	margin: 20px 0;
+}
+.btn-primary{
+	background-color: #3B6EF5;
+	height: 200px;
+	width: 60%;
+	font-size: 64px;
+}
+.btn-secondary{
+	background-color: #3B6EF5;
+	height: 100px;
+	width: 40%;
+	font-size: 42px;
+}
+.bottom-left{
+	text-align: center;
+	width: 50%;
+	padding-left: 200px;
+}
+.bottom-right{
+	width: 50%;
+	padding-right: 200px;
+	margin: auto 0;
+}
+
+div {
+	/*border: 1px solid black;*/
+}
+body {
+	font-size: 26px;
+	text-align: center;
+	background-color: #A6CDDD;
+}
