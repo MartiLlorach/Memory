@@ -3,10 +3,17 @@ var flipped = 0;
 function flip(card){
 	if (card.getAttribute('state')=='unfliped'){
 		card.firstElementChild.setAttribute('src','../images/cruz.jpg');
-		card.setAttribute('state', 'fliped');
-		//+1 a flipped
+		card.setAttribute('state', 'flipped');
+		flipped += 1;
 	}
-	//if 2 flipped, comparar
-	//si son iguales se dejan arriba
-	//si no al cabo de 2 segundos unflip
+	if (flipped==2){
+		flippedC = document.querySelectorAll('[state="flipped"]');
+		if (flippedC[0].getAttribute('name') == flippedC[1].getAttribute('name')){
+			flippedC[0].setAttribute('state', 'solved');
+			flippedC[1].setAttribute('state', 'solved');
+		} else{
+			// al cabo de 2 segundos unflip
+		}
+		flipped = 0;
+	}
 }
