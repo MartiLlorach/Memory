@@ -1,2 +1,2 @@
 # Memory
-Juego de cartas Memory
+Memory card game.
