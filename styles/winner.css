@@ -21,10 +21,10 @@
 	margin: 100px;
 }
 .main {
-	margin: 100px 100px 0 100px;
+	margin: 0px 100px 0 100px;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
+	
 }
 .bottom-left{
 	width: 50%;
@@ -45,4 +45,5 @@ body {
 	font-size: 26px;
 	text-align: center;
 	background-color: #A6CDDD;
+	overflow: hidden;
 }
