@@ -1,4 +1,5 @@
 var flipped = 0;
+var tries = 0;
 
 function flip(card){
 	if (flipped >= 2){return}
@@ -11,6 +12,7 @@ function flip(card){
 
 	if (flipped==2){
 		flippedC = document.querySelectorAll('[state="flipped"]');
+		tries++;
 		if (flippedC[0].getAttribute('name') == flippedC[1].getAttribute('name')){
 			flippedC[0].setAttribute('state', 'solved');
 			flippedC[1].setAttribute('state', 'solved');
