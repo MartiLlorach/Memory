@@ -12,7 +12,7 @@
 		</div>
 		<div class="bottom-row">
 			<div class="bottom-left">
-				<button id="playButton" class="btn btn-primary">Play</button>
+				<a href="game.php"><button id="playButton" class="btn btn-primary">Play</button></a>
 				<button id="rankButton" class="btn btn-secondary">Ranking</button>
 			</div>
 			<div class="bottom-right">
