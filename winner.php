@@ -8,7 +8,7 @@
 <body>
 	<div class="main">
 		<div class="winner">
-			<h1>YOU WIN!</h1>
+			<h1>YOU WON!</h1>
 		</div>
 		<div class="bottom-row">
 			<div class="bottom-left">
