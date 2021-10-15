@@ -10,19 +10,19 @@
 	<div id="counterContainer">
 		<p id='counter'>Cont=0</p>
 	</div>
-	<div id="tableContainer">
+	<div id="cardsContainer">
 				<?php
-					$cardsArray=["heart","heart",
-								"club","club",
-								"diamond","diamond",
-								"spade","spade"];					
+					$cardsArray=["blueEyesWhiteDragon","blueEyesWhiteDragon",
+								"darkMagician","darkMagician",
+								"potOfGreed","potOfGreed",
+								"redEyesBlackDragon","redEyesBlackDragon"];					
 					
 					foreach ($cardsArray as $key) {
 						$random = rand(0,count($cardsArray)-1);
 					 	$nameCard = $cardsArray[$random];
-						echo "<div name='$nameCard' state='unflipped' onlcick='flip(this)'>
-								<img src='../images/club.png'>
-								</div>'";
+						echo "<div class='card' name='$nameCard' state='unflipped' onlcick='flip(this)'>
+								<img src='../images/backCards.jpeg'>
+								</div>";
 						array_splice($cardsArray,$random,1);
 					 }
 					?>
