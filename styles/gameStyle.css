@@ -10,7 +10,7 @@ body{
 }
 #cardsContainer{
 	width: 70%;
-	height: 400px;
+	height: auto;
 	display: flex;
 	flex-wrap: wrap;
 	border: solid black 1px;

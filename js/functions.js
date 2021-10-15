@@ -5,7 +5,7 @@ function flip(card){
 	if (flipped >= 2){return}
 
 	if (card.getAttribute('state')=='unflipped'){
-		card.firstElementChild.setAttribute('src','../images/cruz.jpg');
+		card.firstElementChild.setAttribute('src', '../images/' + card.getAttribute("name") + '.png');
 		card.setAttribute('state', 'flipped');
 		flipped++;
   	}
@@ -20,7 +20,7 @@ function flip(card){
 			flipped = 0;
 
 		} else{
-			setTimeout(unflip, 3000);
+			setTimeout(unflip, 2000);
 
 			// al cabo de 2 segundos unflip
 		}
@@ -30,8 +30,8 @@ function flip(card){
 
 function unflip(){
 	flippedC[0].setAttribute("state", "unflipped");
-	flippedC[0].firstElementChild.setAttribute("src", "../images/cara.jpg");
+	flippedC[0].firstElementChild.setAttribute("src", "../images/backCards.jpeg");
 	flippedC[1].setAttribute("state", "unflipped");
-	flippedC[1].firstElementChild.setAttribute("src", "../images/cara.jpg");
+	flippedC[1].firstElementChild.setAttribute("src", "../images/backCards.jpeg");
 	flipped = 0;
 }
