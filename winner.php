@@ -10,6 +10,13 @@
 		<div class="winner">
 			<h1>YOU WON!</h1>
 		</div>
+		<div class="player-input-row">
+			<form method="POST" action="index.php">
+				<input id="playerName" type="text" placeholder="Your player name">
+				<input type="submit" value="Main menu">
+				<input type="submit" value="Play Again" formaction="game.php">
+			</form>
+		</div>
 		<div class="bottom-row">
 			<div class="bottom-left">
 				<button id="playAgain" class="btn btn-primary">Play again</button>
