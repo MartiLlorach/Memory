@@ -8,7 +8,7 @@
 <body>
 	<div class="main">
 		<div class="logo">
-			<h1>memory</h1>
+			<h1>Me-Mo-Ry!</h1>
 		</div>
 		<div class="bottom-row">
 			<div class="bottom-left">
