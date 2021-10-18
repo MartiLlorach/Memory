@@ -18,7 +18,7 @@ function flip(card){
 			flippedC[0].setAttribute('state', 'solved');
 			flippedC[1].setAttribute('state', 'solved');
 			flipped = 0;
-
+			checkWin();
 		} else{
 			setTimeout(unflip, 2000);
 
@@ -34,4 +34,11 @@ function unflip(){
 	flippedC[1].setAttribute("state", "unflipped");
 	flippedC[1].firstElementChild.setAttribute("src", "../images/backCards.jpeg");
 	flipped = 0;
+}
+function checkWin(){
+	allCards = document.querySelectorAll('[class="card"]');
+	flippedC = document.querySelectorAll('[state="solved"]');
+	if (flippedC.length==allCards.length) {
+		setTimeout("window.open('winner.php','_self')",3000); 
+	}
 }
