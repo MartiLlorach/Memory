@@ -17,7 +17,8 @@
 			</div>
 			<div class="bottom-right">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan, leo nec efficitur semper, velit ligula volutpat urna, eu aliquet ipsum tortor ut dolor. Praesent lorem massa, lobortis eget felis vitae, porttitor rhoncus leo. Maecenas mattis turpis aliquam, gravida orci in, tristique turpis. Aliquam porttitor diam tellus, vitae pretium ex eleifend vel. Nunc ut mattis tellus. Cras vel eros eu tellus tempor tristique. Praesent volutpat eget lacus a viverra.
+					Bienvenido jugador! Acabas de adentrarte en el mundo mágico de la memoria ambientado en Yu-Gi-Oh. 
+					Para empezar a jugar debes pulsar el botón de play. Una vez accionado podrás observar un tablero con cartas giradas, tu objetivo para ganar la partida es girar estas cartas y encontrar las que són iguales... Pero cuidado! Cuando no encuentres una pareja de cartas tu puntuación se verá afectada. Tu objetivo es sacar todas las parejas fallando lo menos posible!
 				</p>
 			</div>
 		</div>

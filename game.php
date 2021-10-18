@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="counterContainer">
-		<p id='counter'>Cont=0</p>
+		<p id='counter'>Cont = 0</p>
 	</div>
 	<div id="cardsContainer">
 				<?php
