@@ -36,7 +36,7 @@
 	margin: 20px 0;
 	color: #DFDCE4;
 	background-image: url('../images/button.jpeg');
-	background-size: inherit;
+	background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
