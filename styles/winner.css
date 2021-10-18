@@ -10,17 +10,23 @@
 
 .winner{
 	padding: 0 0 100px 0;
-	margin: auto 0;
-	-webkit-text-stroke: 1px #A239CA; 
+	margin: auto 0; 
+	text-shadow: 	1px 0 0 #E9E900,
+					0 1px 0 #E9E900,
+					0 -1px 0 #E9E900,
+					-1px 0 0 #E9E900
+					;
 	font-family: 'yugioh';
 	font-size: 100px;
  	animation-name: animation;
-  	animation-duration: 2s;
+  	animation-duration: 1s;
+  	overflow: hidden;
+    white-space: nowrap;
 }
 
 @keyframes animation {
- 	0% {color: transparent; text-shadow: 0px 0px 100px rgba(0,0,0,1); letter-spacing: 80px; -webkit-text-stroke: 2px transparent}
- 	100% {color: black; letter-spacing: normal; -webkit-text-stroke: 1px #A239CA; }
+ 	0% {color: transparent; letter-spacing: 10000px;}
+ 	100% {color: black; letter-spacing: normal;}
 }
 
 .bottom-row{
@@ -50,10 +56,25 @@
 }
 .btn{
 	font-family: 'paragraph';
+	margin: 20px 0;
+	color: #DFDCE4;
+	background-image: url('../images/button.jpeg');
+	background-size: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 body {
-	font-size: 26px;
-	text-align: center;
-	background-color: #A6CDDD;
+	height: 100vh;
 	overflow: hidden;
+	font-family: 'paragraph';
+	font-size: 40px;
+	text-align: center;
+	background-image: url("../images/background.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+p {
+	margin: 0;
+	padding: 0;
 }
