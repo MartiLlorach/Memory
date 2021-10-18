@@ -7,6 +7,16 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body>
+	<?php
+		include "backendFunctions/functions.php";
+
+		if(isset($_POST["playerName"])){
+			saveResult($_POST["playerName"], $_POST["playerTries"]);
+			unset($_POST["playerName"]);
+			unset($_POST["playerTries"]);
+		}
+	
+	?>
 	<div id="counterContainer">
 		<p id='counter'>Cont=0</p>
 	</div>
