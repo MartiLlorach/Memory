@@ -1,5 +1,8 @@
 # Memory
 
+This game consists in finding pairs of cards. Each time you miss a pair of cards they turn back. The game ends when you find all the pairs.
+
+
 To be able to play you need all the files from the main repository, if you are reading this I understand that you have them!
 
 Once the files are obtained, you need to have PHP installed on our computer.
@@ -29,7 +32,7 @@ Once located in "Memory/" we will put the following command: php -S 0:8080.
 This command will active our php. With the "-S" we indicate that we want to start a local web server, with the "0" we indicate that get the local ip address of our computer, and with the "8080" we mark the IP that we want it to have.
 
 
-Once all the previous steps have been carried out, we only have one thing left to do.
-Go to any web browser and type the following url: localhost: 8080 and the main game window will open.
+Once all the previous steps have been done, we only have one thing left to do.
+Go to any web browser and type the following url: localhost:8080 and the main game window will open.
 
 Have fun!:D
