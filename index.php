@@ -17,7 +17,7 @@
 			</div>
 			<div class="bottom-right">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan, leo nec efficitur semper, velit ligula volutpat urna, eu aliquet ipsum tortor ut dolor. Praesent lorem massa, lobortis eget felis vitae, porttitor rhoncus leo. Maecenas mattis turpis aliquam, gravida orci in, tristique turpis. Aliquam porttitor diam tellus, vitae pretium ex eleifend vel. Nunc ut mattis tellus. Cras vel eros eu tellus tempor tristique. Praesent volutpat eget lacus a viverra.
+					Welcome player you've stepped into the magical world of memory. </br>To start playing you must press the play button. Once activated you will be able to observe a board with turned cards, your goal to win the game is turn these cards and find the ones that are the same... But be careful! When you can't find a pair of cards, your score will be affected. Your goal is get all the pairs failing as little as possible!
 				</p>
 			</div>
 		</div>
