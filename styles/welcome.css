@@ -14,7 +14,7 @@
 }
 .logo{
 	color: transparent;
-	margin: 50px auto;
+	margin: 0 auto 50px 0;
 	-webkit-text-stroke: 1px black; 
 	font-family: 'yugioh';
 	font-size: 70px;
@@ -34,15 +34,18 @@
 }
 .btn{
 	margin: 20px 0;
+	color: #DFDCE4;
+	background-image: url('../images/button.jpeg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .btn-primary{
-	background-color: #3B6EF5;
 	height: 200px;
 	width: 60%;
 	font-size: 130px;
 }
 .btn-secondary{
-	background-color: #3B6EF5;
 	height: 100px;
 	width: 40%;
 	font-size: 70px;
@@ -60,16 +63,29 @@
 }
 
 body {
+	height: 100vh;
+	overflow: hidden;
 	font-family: 'paragraph';
 	font-size: 40px;
 	text-align: center;
-	background-color: #A6CDDD;
-	/* background-image: url("../images/background.jpg");
+	background-image: url("../images/background.jpg");
 	background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; */
+    background-position: center;
 }
 
 .btn {
 	font-family: 'paragraph';
+}
+
+p {
+	text-shadow:	0 0 10px #DFDCE4,
+					10px -10px 10px #DFDCE4,
+					15px -15px 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4
+	;
 }

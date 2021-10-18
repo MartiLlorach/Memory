@@ -6,6 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="./styles/welcome.css">
 </head>
 <body>
+	<?php
+		include "backendFunctions/functions.php";
+
+		if(isset($_POST["playerName"])){
+			saveResult($_POST["playerName"], $_POST["playerTries"]);
+			unset($_POST["playerName"]);
+			unset($_POST["playerTries"]);
+		}
+	
+	?>
 	<div class="main">
 		<div class="logo">
 			<h1>Me-Mo-Ry!</h1>

@@ -21,8 +21,6 @@ function flip(card){
 			checkWin();
 		} else{
 			setTimeout(unflip, 2000);
-
-			// al cabo de 2 segundos unflip
 		}
 		
 	}
@@ -39,6 +37,24 @@ function checkWin(){
 	allCards = document.querySelectorAll('[class="card"]');
 	flippedC = document.querySelectorAll('[state="solved"]');
 	if (flippedC.length==allCards.length) {
-		setTimeout("window.open('winner.php','_self')",3000); 
+		createCookie("tries", tries, "10");
+		setTimeout("window.open('winner.php','_self')",3000);
 	}
+}
+
+// Function to create the cookie
+function createCookie(name, value, days) {
+    var expires;
+      
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    else {
+        expires = "";
+    }
+      
+    document.cookie = escape(name) + "=" + 
+        escape(value) + expires + "; path=/";
 }
