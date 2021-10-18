@@ -27,8 +27,7 @@
 			</div>
 			<div class="bottom-right">
 				<p>
-					Bienvenido jugador! Acabas de adentrarte en el mundo mágico de la memoria ambientado en Yu-Gi-Oh. 
-					Para empezar a jugar debes pulsar el botón de play. Una vez accionado podrás observar un tablero con cartas giradas, tu objetivo para ganar la partida es girar estas cartas y encontrar las que són iguales... Pero cuidado! Cuando no encuentres una pareja de cartas tu puntuación se verá afectada. Tu objetivo es sacar todas las parejas fallando lo menos posible!
+					Welcome player you've stepped into the magical world of memory. </br>To start playing you must press the play button. Once activated you will be able to observe a board with turned cards, your goal to win the game is turn these cards and find the ones that are the same... But be careful! When you can't find a pair of cards, your score will be affected. Your goal is get all the pairs failing as little as possible!
 				</p>
 			</div>
 		</div>
