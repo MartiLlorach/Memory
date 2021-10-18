@@ -38,6 +38,7 @@ function checkWin(){
 	flippedC = document.querySelectorAll('[state="solved"]');
 	if (flippedC.length==allCards.length) {
 		createCookie("tries", tries, "10");
+		document.getElementById('cardsContainer').setAttribute('class','flash'); //white flash when solved
 		setTimeout("window.open('winner.php','_self')",3000);
 	}
 }
