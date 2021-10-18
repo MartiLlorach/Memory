@@ -44,7 +44,7 @@
 	flex-direction: row;
 	margin: 100px;
 }
-.main {
+main {
 	margin: 0px 100px 0 100px;
 	display: flex;
 	flex-direction: column;
