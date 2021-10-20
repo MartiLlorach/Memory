@@ -5,7 +5,6 @@ function flip(card){
 	if (flipped >= 2){return}
 
 	if (card.getAttribute('state')=='unflipped'){
-		card.firstElementChild.setAttribute('src', './images/' + card.getAttribute("name") + '.png');
 		card.setAttribute('state', 'flipped');
 		flipped++;
   	}
@@ -28,9 +27,7 @@ function flip(card){
 
 function unflip(){
 	flippedC[0].setAttribute("state", "unflipped");
-	flippedC[0].firstElementChild.setAttribute("src", "./images/backCards.jpeg");
 	flippedC[1].setAttribute("state", "unflipped");
-	flippedC[1].firstElementChild.setAttribute("src", "./images/backCards.jpeg");
 	flipped = 0;
 }
 function checkWin(){

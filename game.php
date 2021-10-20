@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Main Game</title>
-  	<link rel="stylesheet" href="./styles/gameStyle.css" type="text/css">
+	<link rel="stylesheet" href="./styles/gameStyle.css" type="text/css">
+	<link rel="stylesheet" href="./styles/flip-card.css" type="text/css">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body>
@@ -30,9 +31,20 @@
 					foreach ($cardsArray as $key) {
 						$random = rand(0,count($cardsArray)-1);
 					 	$nameCard = $cardsArray[$random];
-						echo "<div class='card' name='$nameCard' state='unflipped' onclick='flip(this)'>
-								<img src='./images/backCards.jpeg'>
-								</div>";
+
+						echo "
+							<div class='card' name='$nameCard' state='unflipped' onclick='flip(this)'>	
+								<div class='card-inner'>
+									<div class='card-front'>
+										<img src='./images/$nameCard.png'>
+									</div>
+									<div class='card-back'>
+										<img src='./images/backCards.jpeg'>
+									</div>
+								</div>
+							</div>						
+							";
+
 						array_splice($cardsArray,$random,1);
 					 }
 					?>
