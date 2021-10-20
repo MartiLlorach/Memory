@@ -15,7 +15,7 @@
 		// If we have a player in a POST variable, we save the data
 
 		if(isset($_POST["playerName"])){
-			saveResult($_POST["playerName"], $_POST["playerTries"]);
+			saveResult($_POST["playerName"], $_POST["playerLevel"], $_POST["playerTime"], $_POST["playerTries"]);
 			unset($_POST["playerName"]);
 			unset($_POST["playerTries"]);
 		}
