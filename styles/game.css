@@ -21,11 +21,7 @@ body{
 }
 .flash{
 	animation-name: flash;
-<<<<<<< HEAD
-  	animation-duration: 2s;
-=======
     animation-duration: 2s;
->>>>>>> bb950db9508cd18bde4dc1939cf6833c18422e21
 }
 @keyframes flash {
 	0% {box-shadow: 0 0 0px transparent;}
