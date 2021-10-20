@@ -9,10 +9,15 @@ Once the files are obtained, you need to have PHP installed on our computer.
 
 Install PHP Windows:
 
-Get your download of php here https://www.php.net/downloads.
+You will download XAMPP and install it (making sure to check apache and php). 
 
-You may install, there are too many options depending of your current version of windows.
-Here is the official manual of php https://www.php.net/manual/es/install.windows.manual.php.
+You can follow the instructions of the following link: https://www.ionos.com/digitalguide/server/tools/xampp-tutorial-create-your-own-local-test-server/
+
+once xampp is installed to run our web app you will need to:
+	- Clear xampp/htdocs
+	- Move this repositorys folder to xampp/htdocs
+ 	- run xampp, go to its control pannel and start Apache
+ 	- go to localhost on your browser of choice
 
 
 Install PHP Linux:
