@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'paragraph'; /*a name to be used later*/
+    src: url('../fonts/Matrix.ttf'); /*URL to font*/
+}
+
+body{
+	overflow: hidden;
+	height: 100vh;
+	font-family: 'paragraph';
+	font-size: 30px;
+	background-image: url("../images/background.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#counterContainer{
+	width: 100px;
+	height: 40px;
+	margin-top: 60px;
+	margin-left: 81%;
+}
+.flash{
+	animation-name: flash;
+    animation-duration: 2s;
+}
+@keyframes flash {
+	0% {box-shadow: 0 0 0px transparent;}
+	50% {box-shadow: 0 0 0px transparent;}
+	75% {box-shadow: 0 0 50px white;}
+	100% {box-shadow: 0 0 0px transparent;}
+
+}	
+
+#cardsContainer{
+	width: 85%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	margin-top: 20px;
+	background-color: #33302F;
+	border: 5px solid #858585;
+}
+.card{
+	width: 20%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1%;
+	flex-grow: 1;
+}
+table{
+	width: 100%;
+	height: 100%;
+}
+td{
+	text-align: center;
+}
+img {
+	width: 50%;
+	height: min-content;
+
+}
+p {
+	text-shadow:	0 0 10px #DFDCE4,
+					10px -10px 10px #DFDCE4,
+					15px -15px 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4
+	;
+	margin: 0;
+}
