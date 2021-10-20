@@ -44,11 +44,13 @@ main {
 	height: 200px;
 	width: 60%;
 	font-size: 130px;
+	margin-top: 100px; /*to position the play button*/
 }
 .btn-secondary{
 	height: 100px;
 	width: 40%;
 	font-size: 70px;
+	display: none; /*display none because button doesnt have function yet*/
 }
 .bottom-left{
 	text-align: center;
