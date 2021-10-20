@@ -20,10 +20,10 @@
 			<!-- The form that manages all the player name and score -->
 
 			<form method="POST" action="index.php">
-				<input id="playerName" name="playerName" type="text" placeholder="Your player name">
+				<input class="inputField" id="playerName" name="playerName" type="text" placeholder="Your player name">
 				<input id="playerTries" name="playerTries" type="number" hidden value="<?php echo $_COOKIE["tries"]?>">
-				<input type="submit" value="Main menu">
-				<input type="submit" value="Play Again" formaction="game.php">
+				<input type="submit" value="Main menu" class="btn">
+				<input type="submit" value="Play Again" formaction="game.php" class="btn">
 			</form>
 		</div>
 	</main>

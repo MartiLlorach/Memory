@@ -66,6 +66,7 @@ function checkWin(){
 
 	if (solvedCards.length == allCards.length) {
 		createCookie("tries", tries, "10");
+		document.getElementById('cardsContainer').setAttribute('class','flash'); //white flash when solved
 		setTimeout("window.open('winner.php','_self')",3000);
 	}
 }
