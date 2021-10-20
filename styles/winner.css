@@ -112,6 +112,15 @@ body {
     background-position: center;
 }
 p {
-	margin: 0;
+	margin: 10px 0;
 	padding: 0;
+	text-shadow:	0 0 10px #DFDCE4,
+					10px -10px 10px #DFDCE4,
+					15px -15px 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4
+	;
 }
