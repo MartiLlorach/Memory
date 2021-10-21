@@ -33,6 +33,7 @@
 			<!-- Buttons -->
 
 			<div class="bottom-left">
+
 				<form method="GET" action="game.php">
 					<input id="playButton" class="btn btn-primary" type="submit" value="Play">
 					<button id="rankButton" class="btn btn-secondary">Ranking</button>
@@ -53,6 +54,7 @@
 						<label for="dif6">dif6</label>
 					</div>
 				</form>
+
 			</div>
 
 			<!-- Instructions -->
