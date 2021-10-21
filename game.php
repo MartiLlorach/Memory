@@ -36,10 +36,28 @@
 
 			// We make an array with all the cards and then we choose them randomly
 
-			$cardsArray = ["blueEyesWhiteDragon","blueEyesWhiteDragon", 
-			"darkMagician","darkMagician", 
-			"potOfGreed","potOfGreed", 
-			"redEyesBlackDragon","redEyesBlackDragon"];					
+			$cardsArray = [["blueEyesWhiteDragon","blueEyesWhiteDragon"], 
+			["darkMagician","darkMagician"], 
+			["potOfGreed","potOfGreed"], 
+			["redEyesBlackDragon","redEyesBlackDragon"],
+			["BBusterDrake","BBusterDrake"],
+			["ExodiatheForbiddenOne","ExodiatheForbiddenOne"],
+			["LeftArmoftheForbiddenOne","LeftArmoftheForbiddenOne"],
+			["LeftLegoftheForbiddenOne","LeftLegoftheForbiddenOne"],
+			["RightArmoftheForbiddenOne","RightArmoftheForbiddenOne"],
+			["RightLegoftheForbiddenOne","RightLegoftheForbiddenOne"],
+			["MegalosmasherX","MegalosmasherX"],
+			["ToonBusterBlader","ToonBusterBlader"],
+			["Buten","Buten"],
+			["MessengerofPeace","MessengerofPeace"],
+			["ReturnoftheDragonLords","ReturnoftheDragonLords"],
+			["ThornofMalice","ThornofMalice"],
+			["FloodgateTrapHole","FloodgateTrapHole"],
+			["MirrorForce","MirrorForce"],
+			["CalloftheHaunted","CalloftheHaunted"],
+			["GemKnightPearl","GemKnightPearl"],
+			["FormulaSynchron","FormulaSynchron"]
+			];					
 					
 			foreach ($cardsArray as $key) {
 				$random = rand(0,count($cardsArray)-1);
