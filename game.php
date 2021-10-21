@@ -21,12 +21,29 @@
 		}
 	
 	?>
-	<div id="counterContainer">
+	<div id="headerContainer">
+		<div id="cancelContainer">
 
-		<!-- Player tries -->
+			<!-- Cancel button -->
 
-		<p id="tries">Tries = 0</p>
+			<button id="cancel">Cancel</button>
+		</div>
+
+		<div id="timerContainer">
+
+			<!-- Timer -->
+
+			<p id="timer">Timer = 0:00</p>
+		</div>
+
+		<div id="counterContainer">
+
+			<!-- Player tries -->
+
+			<p id="tries">Tries = 0</p>
+		</div>
 	</div>
+	
 
 	<div id="cardsContainer">
 

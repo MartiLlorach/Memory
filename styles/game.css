@@ -13,11 +13,35 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
+#headerContainer{
+	width: 85%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	margin-top: 60px;
+	
+	
+}
+#cancelContainer{
+	width: 100px;
+	height: 40px;
+	margin-top: 60px;
+	margin-left: 0px;
+	
+}
+#timerContainer{
+	width: 150px;
+	height: 40px;
+	margin-top: 60px;
+	
+	margin-left: auto;
+}
 #counterContainer{
 	width: 100px;
 	height: 40px;
 	margin-top: 60px;
-	margin-left: 81%;
+	margin-left: auto;
 }
 .flash{
 	animation-name: flash;
