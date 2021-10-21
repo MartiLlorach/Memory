@@ -5,13 +5,12 @@
 	<title>Memory - Game</title>
 	<link rel="stylesheet" href="./styles/game.css" type="text/css">
 	<link rel="stylesheet" href="./styles/flip-card.css" type="text/css">
+	<link rel="stylesheet" href="./styles/cardStyle<?php include "backendFunctions/functions.php"; echo difficultySelector($_GET["dif"])["columns"]?>Columns.css" type="text/css">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
 <body>
 	<?php
-		include "backendFunctions/functions.php";
-
 		// If we have a player in a POST variable, we save the data
 
 		if(isset($_POST["playerName"])){
