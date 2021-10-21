@@ -1,18 +1,9 @@
-@font-face {
-    font-family: 'paragraph'; /*a name to be used later*/
-    src: url('../fonts/Matrix.ttf'); /*URL to font*/
-}
+@import "general.css";
 
 body{
-	overflow: hidden;
-	height: 100vh;
-	font-family: 'paragraph';
 	font-size: 30px;
-	background-image: url("../images/background.jpg");
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
+
 #counterContainer{
 	width: 100px;
 	height: 40px;
