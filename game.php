@@ -26,7 +26,7 @@
 
 			<!-- Cancel button -->
 
-			<button id="cancel">Cancel</button>
+			<a href="index.php"><button id="cancel" class="btn" >Cancel</button></a>
 		</div>
 
 		<div id="timerContainer">

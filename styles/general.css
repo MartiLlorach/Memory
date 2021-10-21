@@ -20,5 +20,9 @@ body {
 
 .btn {
 	font-family: 'paragraph';
+	color: #DFDCE4;
+	background-image: url('../images/button.jpeg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-

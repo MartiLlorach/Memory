@@ -10,17 +10,21 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	margin: auto;
-	margin-top: 60px;
-	
-	
+	margin-top: 60px;	
 }
 #cancelContainer{
-	width: 100px;
-	height: 40px;
-	margin-top: 60px;
+	width: 200px;
+	height: 70px;
+	margin-top: 30px;
 	margin-left: 0px;
-	
 }
+
+#cancelContainer .btn{
+	width: 100%;
+	height: 100%;
+	font-size: 45px;
+}
+
 #timerContainer{
 	width: 150px;
 	height: 40px;
@@ -30,7 +34,7 @@ body{
 }
 
 #counterContainer{
-	width: 100px;
+	width: 200px;
 	height: 40px;
 	margin-top: 60px;
 	margin-left: auto;
