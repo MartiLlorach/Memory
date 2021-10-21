@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body>
+<body onload="innitTimer()">
 	<?php
 		include "backendFunctions/functions.php";
 
@@ -33,7 +33,7 @@
 
 			<!-- Timer -->
 
-			<p id="timer">Timer = 0:00</p>
+			<p>Timer = </p><p id="timer"></p>
 		</div>
 
 		<div id="counterContainer">
