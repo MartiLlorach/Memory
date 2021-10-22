@@ -1,10 +1,10 @@
 .card{
-    width: 8vw;
-    height: 16vh;
+    width: 5vw;
+    height: 14vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 1vw;
+    margin: 1vh 2.5vw;
     flex-grow: 1;
     perspective: 1000px; 
     color: transparent;
@@ -12,5 +12,5 @@
 
 img {
 	width: 5vw;
-	height: min-content;
+	height: 14vh;
 }
