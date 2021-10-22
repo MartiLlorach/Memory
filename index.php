@@ -39,19 +39,19 @@
 					<button id="rankButton" class="btn btn-secondary">Ranking</button>
 					<div id="difficulty-selector-left">
 						<input type="radio" id="dif1" name="dif" value="1" checked>
-						<label for="dif1">dif1</label>
+						<label for="dif1">Tristan</label>
 						<input type="radio" id="dif2" name="dif" value="2">
-						<label for="dif2">dif2</label>
+						<label for="dif2">Joey</label>
 						<input type="radio" id="dif3" name="dif" value="3">
-						<label for="dif3">dif3</label>
+						<label for="dif3">Bakura</label>
 					</div>
 					<div id="difficulty-selector-right">
 						<input type="radio" id="dif4" name="dif" value="4">
-						<label for="dif4">dif4</label>
+						<label for="dif4">Yugi</label>
 						<input type="radio" id="dif5" name="dif" value="5">
-						<label for="dif5">dif5</label>
+						<label for="dif5">Kaiba</label>
 						<input type="radio" id="dif6" name="dif" value="6">
-						<label for="dif6">dif6</label>
+						<label for="dif6">Atem</label>
 					</div>
 				</form>
 
