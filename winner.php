@@ -7,6 +7,21 @@
 </head>
 
 <body>
+	<?php
+		session_start();
+		include "backendFunctions/functions.php";
+		if(isset($_SESSION["btn-primary"])){
+			saveResult($_SESSION["btn-primary"], "0", "0", "0");
+			unset($_SESSION["playerName"]);
+		}
+		/*
+		if(isset($_POST["playerName"])){
+			saveResult($_POST["playerName"], $_POST["playerLevel"], $_POST["playerTime"], $_POST["playerTries"]);
+			unset($_POST["playerName"]);
+			unset($_POST["playerTries"]);
+		}
+		*/
+	?>
 	<main>
 		<div class="winner">
 			<h1>YOU WON!</h1>

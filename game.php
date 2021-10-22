@@ -10,16 +10,10 @@
 
 <body onload="innitTimer()">
 	<?php
-		include "backendFunctions/functions.php";
+		
 		session_start();
-		$_SESSION['btn-primary'];
-		// If we have a player in a POST variable, we save the data
-
-		if(isset($_POST["playerName"])){
-			saveResult($_POST["playerName"], $_POST["playerLevel"], $_POST["playerTime"], $_POST["playerTries"]);
-			unset($_POST["playerName"]);
-			unset($_POST["playerTries"]);
-		}
+		$_SESSION['playerName']=$_POST['playerName'];
+		
 	
 	?>
 	<div id="headerContainer">
