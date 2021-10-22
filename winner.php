@@ -9,7 +9,7 @@
 <body>
 	<main>
 		<div class="winner">
-			<h1>YOU WON!</h1>
+			<h1>YOU WIN!</h1>
 		</div>
 
 		<div class="player-input-row">
