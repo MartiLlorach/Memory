@@ -88,3 +88,37 @@ function createCookie(name, value) {
     document.cookie = escape(name) + "=" + 
         escape(value) + "; path=/";
 }
+
+
+// ###############TIMER###############
+
+var maxT = 60; //limit time in seconds
+function innitTimer(){
+	secondPasses();
+	var clock = setInterval('secondPasses()', 1000);
+}
+function secondPasses(){
+	let timer = document.getElementById('timer');
+	let min = Math.floor(maxT/60);
+	let sec = maxT - min*60;
+	let minS = min;
+	let secS = sec;
+
+	if (min.toString().length == 1){
+		minS = '0' + min;
+	}
+	if (sec.toString().length == 1){
+		secS = '0' + sec;
+	}
+
+	if (min==0) timer.innerHTML='00:'+secS;
+	else timer.innerHTML=minS+':'+secS;
+
+	maxT--;
+
+	if (maxT<=0){
+		maxT=0;
+		document.getElementById('cardsContainer').setAttribute('class','redFlash'); //white flash when solved
+		setTimeout("window.open('gameOver.php','_self')",3000);
+	}
+}

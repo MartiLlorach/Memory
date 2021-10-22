@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body>
+<body onload="innitTimer()">
 	<?php
 		include "backendFunctions/functions.php";
 
@@ -21,12 +21,29 @@
 		}
 	
 	?>
-	<div id="counterContainer">
+	<div id="headerContainer">
+		<div id="cancelContainer">
 
-		<!-- Player tries -->
+			<!-- Cancel button -->
 
-		<p id="tries">Tries = 0</p>
+			<a href="index.php"><button id="cancel" class="btn" >Cancel</button></a>
+		</div>
+
+		<div id="timerContainer">
+
+			<!-- Timer -->
+
+			<p>Timer = </p><p id="timer"></p>
+		</div>
+
+		<div id="counterContainer">
+
+			<!-- Player tries -->
+
+			<p id="tries">Tries = 0</p>
+		</div>
 	</div>
+	
 
 	<div id="cardsContainer">
 
