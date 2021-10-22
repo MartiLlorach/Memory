@@ -1,15 +1,16 @@
 .card{
-    width: 10%;
+    width: 8vw;
+    height: 16vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 8% 1%;
+    margin: 0 2vh;
     flex-grow: 1;
     perspective: 1000px; 
     color: transparent;
 }
 
 img {
-	width: 80%;
+	width: 60%;
 	height: min-content;
 }
