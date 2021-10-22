@@ -26,6 +26,7 @@
 
 			<form method="POST" action="index.php">
 				<button type="submit" value="Main menu" class="btn"> Main Menu</button>
+				<input type="submit" value="Ranking" formaction="ranking.php" class="btn">
 				<button type="submit" value="Play Again" formaction="game.php" class="btn"> Play Again</button>
 			</form>
 		</div>
