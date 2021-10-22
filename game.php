@@ -5,7 +5,7 @@
 	<title>Memory - Game</title>
 	<link rel="stylesheet" href="./styles/game.css" type="text/css">
 	<link rel="stylesheet" href="./styles/flip-card.css" type="text/css">
-	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_GET["dif"]?>.css" type="text/css">
+	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_POST["dif"]?>.css" type="text/css">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
@@ -32,7 +32,7 @@
 		<!-- Card's board -->
 
 		<?php
-			generateCards($_GET["dif"]);		
+			generateCards($_POST["dif"]);		
 
 		?>
 	</div>

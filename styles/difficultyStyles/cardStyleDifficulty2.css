@@ -1,0 +1,10 @@
+.card{
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8% 3%;
+    flex-grow: 1;
+    perspective: 1000px; 
+    color: transparent;
+}

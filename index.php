@@ -34,7 +34,7 @@
 
 			<div class="bottom-left">
 
-				<form method="GET" action="game.php">
+				<form method="POST" action="game.php">
 					<input id="playButton" class="btn btn-primary" type="submit" value="Play">
 					<button id="rankButton" class="btn btn-secondary">Ranking</button>
 					<div id="difficulty-selector-left">
