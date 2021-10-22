@@ -5,7 +5,7 @@
 	<title>Memory - Game</title>
 	<link rel="stylesheet" href="./styles/game.css" type="text/css">
 	<link rel="stylesheet" href="./styles/flip-card.css" type="text/css">
-	<link rel="stylesheet" href="./styles/cardStyle<?php include "backendFunctions/functions.php"; echo difficultySelector($_GET["dif"])["columns"]?>Columns.css" type="text/css">
+	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_GET["dif"]?>.css" type="text/css">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
