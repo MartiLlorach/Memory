@@ -122,3 +122,16 @@ function secondPasses(){
 		setTimeout("window.open('gameOver.php','_self')",3000);
 	}
 }
+
+function validateBtn(input,button){
+	var btn = document.getElementById(button);
+	if (document.getElementById(input).value.length == 0) {
+		btn.disabled = true;
+
+	}else{
+
+		btn.disabled = false;
+
+	}
+	  
+}

@@ -4,12 +4,14 @@
 	<meta charset="utf-8">
 	<title>Memory - Main Page</title>
 	<link rel="stylesheet" type="text/css" href="./styles/index.css">
+	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
 <body>
 	<?php
 		include "backendFunctions/functions.php";
-
+		session_start();
+		$_SESSION['btn-primary'];
 		// If we have a player in a POST variable, we save the data
 
 		if(isset($_POST["playerName"])){
@@ -17,7 +19,7 @@
 			unset($_POST["playerName"]);
 			unset($_POST["playerTries"]);
 		}
-	
+		
 	?>
 
 	<main>
@@ -27,13 +29,23 @@
 		<div class="logo">
 			<h1>Me-Mo-Ry!</h1>
 		</div>
-		
+
+		<!-- Form Username -->
+
+		<div class="userForm">
+			<form method="POST" action="game.php">
+				<input class="inputField" id="playerName" name="playerName" type="text" placeholder="Your player name" oninput="validateBtn('playerName','btn-primary')">
+		</div>
+
 		<div class="bottom-row">
 
 			<!-- Buttons -->
 
 			<div class="bottom-left">
-				<a href="game.php"><button id="playButton" class="btn btn-primary">Play</button></a>
+
+					<input type="submit" value="Play" formaction="game.php" class="btn btn-primary" id="btn-primary" disabled="true">
+				</form>
+				
 				<a href="ranking.php"><button id="rankButton" class="btn btn-secondary">Ranking</button></a>
 			</div>
 
