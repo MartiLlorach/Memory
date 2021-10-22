@@ -4,7 +4,15 @@
 	background: linear-gradient(180deg, rgba(21,21,29,1) 0%, rgba(0,0,0,1) 39%, rgba(64,63,83,0.9976365546218487) 93%);
 	height: 50px;
 	font-size: 60px;
+	color: #DFDCE4;
 }
 .player p{
 	margin: 0;
+}
+.left{
+	display: inline;
+}
+.right{
+	margin-left: 50%;
+	display: inline;
 }
