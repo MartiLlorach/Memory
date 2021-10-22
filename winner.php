@@ -9,7 +9,7 @@
 <body>
 	<main>
 		<div class="winner">
-			<h1>YOU WON!</h1>
+			<h1>YOU WIN!</h1>
 		</div>
 
 		<div class="player-input-row">
@@ -25,6 +25,7 @@
 				<input id="playerTime" name="playerTime" type="number" hidden value="0">
 				<input id="playerTries" name="playerTries" type="number" hidden value="<?php echo ($_COOKIE["tries"] -4)?>">
 				<input type="submit" value="Main menu" class="btn">
+				<input type="submit" value="Ranking" formaction="ranking.php" class="btn">
 				<input type="submit" value="Play Again" formaction="game.php" class="btn">
 			</form>
 		</div>
