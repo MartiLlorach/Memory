@@ -90,8 +90,11 @@ function createCookie(name, value) {
 }
 
 
+// ###############TIMER###############
+
 var maxT = 60; //limit time in seconds
 function innitTimer(){
+	secondPasses();
 	var clock = setInterval('secondPasses()', 1000);
 }
 function secondPasses(){
@@ -113,4 +116,9 @@ function secondPasses(){
 
 	maxT--;
 
+	if (maxT<=0){
+		maxT=0;
+		document.getElementById('cardsContainer').setAttribute('class','redFlash'); //white flash when solved
+		setTimeout("window.open('gameOver.php','_self')",3000);
+	}
 }

@@ -52,8 +52,17 @@ body{
 	50% {box-shadow: 0 0 0px transparent;}
 	75% {box-shadow: 0 0 50px white;}
 	100% {box-shadow: 0 0 0px transparent;}
-
-}	
+}
+.redFlash{
+	animation-name: redFlash;
+    animation-duration: 2s;
+}
+@keyframes redFlash {
+	0% {box-shadow: 0 0 0px transparent;}
+	50% {box-shadow: 0 0 0px transparent;}
+	75% {box-shadow: 0 0 50px #E92924;}
+	100% {box-shadow: 0 0 0px transparent;}
+}		
 
 #cardsContainer{
 	width: 85%;
