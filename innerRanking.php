@@ -5,11 +5,10 @@
 	<link rel="stylesheet" type="text/css" href="./styles/general.css">
 </head>
 <body>
-	<div class="players">
-		
-	</div>
-	<div class="scores">
-
+	<div class="flex">
+		<div class="player" style="">
+			aaaaaaaaa
+		</div>
 	</div>
 </body>
 </html>
