@@ -34,7 +34,7 @@
 
 			<div class="bottom-left">
 				<a href="game.php"><button id="playButton" class="btn btn-primary">Play</button></a>
-				<a href="ranking.php"><button id="rankButton" class="btn btn-secondary">Ranking</button></a>
+				<button id="rankButton" class="btn btn-secondary">Ranking</button>
 			</div>
 
 			<!-- Instructions -->
