@@ -41,7 +41,7 @@
 			
 			<div class="bottom-right">
 				<h2>Welcome human, you've stepped into the magical world of Me-Mo-Ry!</h2>
-				<p>To start playing you must press the play button. Once activated you will be able to see a board filled cards. Your goal is to turn these cards and find their pairs... But be careful! When you don't flip a pair your score will be affected. Your goal is to get all the pairs, failing the least possible!</p>
+				<p>To start playing you must press the play button. Once activated you will be able to see a board filled with cards. Your goal is to turn these cards and to find pairs... But be careful! When you don't flip a pair your score will be affected. Your goal is to get all the pairs, while failing the least possible!</p>
 			</div>
 
 		</div>
