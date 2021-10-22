@@ -8,19 +8,17 @@
 	<div>
 		<?php
 			$players = explode("\n", file_get_contents("HallOfFame.txt"));
-			print_r($players);
+			array_pop($players);
 			$cont = 1;
 			foreach ($players as $player) {
+				$player = explode("#", $player);
 				echo "
-				<div class="player">
-					<div class="left">$cont. $player[0]</div> <div class="right">$player[4]</div>
+				<div class=player>
+					<div class=left>$cont. $player[0]</div> <div class=right>punt</div>
 				</div>
 			";
-			}
-			
-
-		
-		
+			}	
+		?>		
 	</div>
 </body>
 </html>
