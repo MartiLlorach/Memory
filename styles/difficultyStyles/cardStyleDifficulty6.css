@@ -4,13 +4,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 2vh;
+    margin: 0 1vw;
     flex-grow: 1;
     perspective: 1000px; 
     color: transparent;
 }
 
 img {
-	width: 60%;
+	width: 5vw;
 	height: min-content;
 }
