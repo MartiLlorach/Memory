@@ -49,7 +49,14 @@
 		<!-- Card's board -->
 
 		<?php
-			generateCards($_POST["dif"]);		
+
+			if (isset($_POST["hardcoreMode"])) {
+				$hardcore = 1;
+			} else {
+				$hardcore = 0;
+			}
+
+			generateCards($_POST["dif"], $hardcore);		
 
 		?>
 	</div>

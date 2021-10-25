@@ -10,9 +10,11 @@
 
     // This function handles all the functions to generate the cards
 
-    function generateCards($difficulty){
+    function generateCards($difficulty, $hardcore){
 
-        $gameTable = difficultySelector($difficulty);
+        $gameTable = difficultySelector($difficulty, $hardcore);
+
+        // Falta implementar aqui el hardcore -- bug con cartas impares
 
 		$cardsArray = cardsSelection($gameTable["columns"], $gameTable["rows"]);
       
@@ -22,24 +24,24 @@
 
     // This function returns the columns and rows depending on difficulty
 
-    function difficultySelector($difficulty) {
+    function difficultySelector($difficulty, $hardcore) {
         if ($difficulty == "1") {
-            return ["columns" => 4, "rows" => 2];
+            return ["columns" => 4 + $hardcore, "rows" => 2];
 
         } elseif ($difficulty == "2") {
-            return ["columns" => 4, "rows" => 3];
+            return ["columns" => 4 + $hardcore, "rows" => 3];
 
         } elseif ($difficulty == "3") {
-            return ["columns" => 4, "rows" => 4];
+            return ["columns" => 4 + $hardcore, "rows" => 4];
 
         } elseif ($difficulty == "4") {
-            return ["columns" => 5, "rows" => 4];
+            return ["columns" => 5 + $hardcore, "rows" => 4];
 
         } elseif ($difficulty == "5") {
-            return ["columns" => 6, "rows" => 5];
+            return ["columns" => 6 + $hardcore, "rows" => 5];
 
         } elseif ($difficulty == "6") {
-            return ["columns" => 8, "rows" => 5];
+            return ["columns" => 8 + $hardcore, "rows" => 5];
         }
     }
 
