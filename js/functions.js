@@ -1,5 +1,6 @@
 var flipped = 0;
 var tries = 0;
+var extraCards = 0;
 
 // This function contains de logic of the game
 
@@ -64,7 +65,7 @@ function checkWin(){
 	allCards = document.querySelectorAll('[class="card"]');
 	solvedCards = document.querySelectorAll('[state="solved"]');
 
-	if (solvedCards.length == allCards.length) {
+	if (solvedCards.length == allCards.length - extraCards) {
 		createCookie("tries", tries, "10");
 		document.getElementById('cardsContainer').setAttribute('class','flash'); //white flash when solved
 		setTimeout("window.open('winner.php','_self')",3000);

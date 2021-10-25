@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<?php
+
+		if (isset($_POST["hardcoreMode"])) {
+			$hardcore = 1;
+			$hardcoreCSS = "h";
+		} else {
+			$hardcore = 0;
+			$hardcoreCSS = "";
+		}
+	?>
 	<meta charset="utf-8">
 	<title>Memory - Game</title>
 	<link rel="stylesheet" href="./styles/game.css" type="text/css">
 	<link rel="stylesheet" href="./styles/flip-card.css" type="text/css">
-	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_POST["dif"]?>.css" type="text/css">
+	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_POST["dif"].$hardcoreCSS?>.css" type="text/css">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 

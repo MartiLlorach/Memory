@@ -13,10 +13,12 @@
     function generateCards($difficulty, $hardcore){
 
         $gameTable = difficultySelector($difficulty, $hardcore);
+        
+        if ($hardcore == 1) {
+            echo "<script> extraCards = ".$gameTable["rows"].";</script>";
+        }
 
-        // Falta implementar aqui el hardcore -- bug con cartas impares
-
-		$cardsArray = cardsSelection($gameTable["columns"], $gameTable["rows"]);
+		$cardsArray = cardsSelection($gameTable["columns"], $gameTable["rows"], $hardcore);
       
         printCards($cardsArray);
 
@@ -47,9 +49,10 @@
 
     // This function returns an array of cards randomly selected
 
-    function cardsSelection($columns, $rows) {
-        $quantityOfCards = ($columns * $rows) / 2;
+    function cardsSelection($columns, $rows, $hardcore) {
+        $quantityOfCards = (($columns - $hardcore) * $rows) / 2;
         $gameCards = [];
+        $extraCards = [];
 
         $cardsArray = [["blueEyesWhiteDragon","blueEyesWhiteDragon"], 
         ["darkMagician","darkMagician"], 
@@ -79,6 +82,16 @@
             array_push($gameCards, $cardsArray[$randomCouple]);
             array_splice($cardsArray, $randomCouple, 1);
         }
+        
+        if ($hardcore == 1){
+            for ($i = 0 ; $i < $rows; $i++){
+                $randomCard = rand(0,count($cardsArray)-1);
+                array_push($extraCards, $cardsArray[$randomCard][0]);
+                array_splice($cardsArray, $randomCard, 1);
+            }
+
+            array_push($gameCards, $extraCards);
+        }
 
         return $gameCards;
     }
@@ -87,9 +100,7 @@
 
     function printCards($cardsArray) {
 
-        $cardsIntoPlay = count($cardsArray) * 2;
-
-        for ($i=0; $i < $cardsIntoPlay; $i++) { 
+        while(count($cardsArray) > 0) { 
             $random = rand(0, count($cardsArray)-1);
 		 	$nameCard = $cardsArray[$random][0];
 			echo "
