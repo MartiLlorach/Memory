@@ -76,9 +76,7 @@
 		?>
 	</div>
 
-	<div id='containerEasterEgg'>
-		
-	</div>
+	<?php printEasterEgg() ?>
 
 </body>
 </html>

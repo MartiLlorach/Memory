@@ -127,6 +127,10 @@ function secondPasses(){
 	}
 }
 
+function showExodia(){
+	
+}
+
 function keyCode(event) {
   var x = event.keyCode;
   
@@ -134,7 +138,7 @@ function keyCode(event) {
   exodiaEE.push(x);
   
   if (exodiaEE[0]==69&&exodiaEE[1]==88&&exodiaEE[2]==79&&exodiaEE[3]==68&&exodiaEE[4]==73&&exodiaEE[5]==65) {
-	alert('exodia');			
+	showExodia();			
   }
   
 }

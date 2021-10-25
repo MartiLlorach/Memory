@@ -161,4 +161,61 @@
         }
     }
 
+    function printEasterEgg(){
+        echo "
+            <div id='containerEasterEgg'>
+                <div id='head' class='EGcard' state='unflipped'>
+                    <div class='card-inner'>
+                        <div class='card-front'>
+                            <img src='./images/ExodiatheForbiddenOne.png'>
+                        </div>
+                        <div class='card-back'>
+                            <img src='./images/backCards.jpeg'>
+                        </div>
+                    </div>
+                </div>
+                <div id='leftArm' class='EGcard' state='unflipped'>
+                    <div class='card-inner'>
+                        <div class='card-front'>
+                            <img src='./images/LeftArmoftheForbiddenOne.png'>
+                        </div>
+                        <div class='card-back'>
+                            <img src='./images/backCards.jpeg'>
+                        </div>
+                    </div>
+                </div>
+                <div id='leftLeg' class='EGcard' state='unflipped'>
+                    <div class='card-inner'>
+                        <div class='card-front'>
+                            <img src='./images/LeftLegoftheForbiddenOne.png'>
+                        </div>
+                        <div class='card-back'>
+                            <img src='./images/backCards.jpeg'>
+                        </div>
+                    </div>
+                </div>
+                <div id='rightArm' class='EGcard' state='unflipped'>
+                    <div class='card-inner'>
+                        <div class='card-front'>
+                            <img src='./images/RightArmoftheForbiddenOne.png'>
+                        </div>
+                        <div class='card-back'>
+                            <img src='./images/backCards.jpeg'>
+                        </div>
+                    </div>
+                </div>
+                <div id='rightLeg' class='EGcard' state='unflipped'>
+                    <div class='card-inner'>
+                        <div class='card-front'>
+                            <img src='./images/RightLegoftheForbiddenOne.png'>
+                        </div>
+                        <div class='card-back'>
+                            <img src='./images/backCards.jpeg'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ";
+    }
+
 ?>
