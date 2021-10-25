@@ -10,11 +10,6 @@
 <body >
 	<main>
 
-		<?php
-			session_start();
-			$name =$_SESSION['playerName'];
-		?>
-
 		<!-- Logo -->
 
 		<div class="logo">
