@@ -10,12 +10,11 @@
 
 <body onload="innitTimer()">
 	<?php
-		
 		session_start();
-		$_SESSION['playerName']=$_POST['playerName'];
+		$_SESSION['playerName'] = $_POST['playerName'];
 		
-	
 	?>
+	
 	<div id="headerContainer">
 		<div id="cancelContainer">
 

@@ -25,27 +25,8 @@
 
 		<div class="userForm">
 			<form method="POST" action="game.php">
-				<!-- Create input text form void when Session is not actived, if Session is actived generate the input text with the value of Session that is the last username -->
-				<?php
-					
-					if (isset($_SESSION['playerName'])) {
-						echo '<input class="inputField" 
-								id="playerName" 
-								name="playerName" 
-								value="'.$name.'" 
-								type="text" 
-								placeholder="Your player name" 
-								oninput="validateBtn(\'playerName\',\'btn-primary\')">';
-					}else{
-						echo '<input class="inputField" 
-								id="playerName" 
-								name="playerName" 
-								type="text" 
-								placeholder="Your player name" 
-								oninput="validateBtn(\'playerName\',\'btn-primary\')">';
-					}
-					
-				?>
+				<input class="inputField" id="playerName" name="playerName" type="text" placeholder="Your player name" oninput="validateBtn('playerName', 'btn-primary')">
+
 		</div>
 
 		<div class="bottom-row">
