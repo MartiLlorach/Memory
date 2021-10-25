@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body onload="innitTimer()">
+<body onload="innitTimer()" onkeydown="keyCode(event)">
 	<?php
 		// If we have a player in a POST variable, we save the data
 
@@ -65,7 +65,6 @@
 			<p id="tries">Tries = 0</p>
 		</div>
 	</div>
-	
 
 	<div id="cardsContainer">
 
@@ -76,5 +75,10 @@
 
 		?>
 	</div>
+
+	<div id='containerEasterEgg'>
+		
+	</div>
+
 </body>
 </html>

@@ -1,3 +1,4 @@
+var exodiaEE=[];
 var flipped = 0;
 var tries = 0;
 
@@ -124,4 +125,16 @@ function secondPasses(){
 		document.getElementById('cardsContainer').setAttribute('class','redFlash'); //white flash when solved
 		setTimeout("window.open('gameOver.php','_self')",3000);
 	}
+}
+
+function keyCode(event) {
+  var x = event.keyCode;
+  
+  /*69,88,79,68,73,65*/
+  exodiaEE.push(x);
+  
+  if (exodiaEE[0]==69&&exodiaEE[1]==88&&exodiaEE[2]==79&&exodiaEE[3]==68&&exodiaEE[4]==73&&exodiaEE[5]==65) {
+	alert('exodia');			
+  }
+  
 }
