@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body onload="innitTimer()">
+<body onload="innitGame()">
 	<?php
 		// If we have a player in a POST variable, we save the data
 

@@ -18,7 +18,7 @@
             echo "<script> extraCards = ".$gameTable["rows"].";</script>";
         }
 
-		$cardsArray = cardsSelection($gameTable["columns"], $gameTable["rows"], $hardcore);
+        $cardsArray = cardsSelection($gameTable["columns"], $gameTable["rows"], $hardcore);
       
         printCards($cardsArray);
 
@@ -81,7 +81,6 @@
         ["Amaterasu","Amaterasu"],
         ["GiltiGearfriedtheMagicalSteelKnight","GiltiGearfriedtheMagicalSteelKnight"]
         ];
-
         for ($i=0; $i < $quantityOfCards; $i++) { 
             $randomCouple = rand(0,count($cardsArray)-1);
             array_push($gameCards, $cardsArray[$randomCouple]);
@@ -91,10 +90,11 @@
         if ($hardcore == 1){
             for ($i = 0 ; $i < $rows; $i++){
                 $randomCard = rand(0,count($cardsArray)-1);
-                $cardsArray[$randomCard][1] = "unique"; 
-                array_push($gameCards, $cardsArray[$randomCard]);
+                array_push($extraCards, $cardsArray[$randomCard][0]);
                 array_splice($cardsArray, $randomCard, 1);
             }
+
+            array_push($gameCards, $extraCards);
         }
 
         return $gameCards;
@@ -106,37 +106,25 @@
 
         while(count($cardsArray) > 0) { 
             $random = rand(0, count($cardsArray)-1);
-		 	$nameCard = $cardsArray[$random][0];
-            $isUnique=false;
-            if (count($cardsArray[$random])==2){
-                if ($cardsArray[$random][1]=="unique"){
-                    $isUnique =true;
-                }
-            }
-            $converted_isUnique = $isUnique ? 'true' : 'false';
-			echo "
-				<div class='card' name='$nameCard' state='unflipped' isUnique=$converted_isUnique onclick='flip(this)'>
-					<div class='card-inner'>
-						<div class='card-front'>
-							<img src='./images/$nameCard.png'>
-						</div>
-						<div class='card-back'>
-							<img src='./images/backCards.jpeg'>
-						</div>
-					</div>
-				</div>						
-				";
+            $nameCard = $cardsArray[$random][0];
+            echo "
+                <div class='card' name='$nameCard' state='unflipped' onclick='flip(this)'>  
+                    <div class='card-inner'>
+                        <div class='card-front'>
+                            <img src='./images/$nameCard.png'>
+                        </div>
+                        <div class='card-back'>
+                            <img src='./images/backCards.jpeg'>
+                        </div>
+                    </div>
+                </div>                      
+                ";
 
-            if ($isUnique){
+            array_splice($cardsArray[$random], 0,1);
+
+            if(count($cardsArray[$random]) == 0) {
                 array_splice($cardsArray, $random, 1);
-            } else {
-                array_splice($cardsArray[$random], 0,1);
-
-                if(count($cardsArray[$random]) == 0) {
-                    array_splice($cardsArray, $random, 1);
-                }
             }
-			
         }
     }
 

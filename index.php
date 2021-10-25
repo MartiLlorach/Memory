@@ -55,7 +55,7 @@
 					</div>
 					<div>
 						<input type="checkbox" id="hardcoreMode" name="hardcoreMode" value="activated">
-						<label for="hardcoreMode">Enter The Shadow Realm (Hardcore Mode)</label>
+						<label for="hardcoreMode">Enter The Shadow Realm (Advanced Mode)</label>
 					</div>
 				</form>
 
