@@ -74,7 +74,12 @@
         ["MirrorForce","MirrorForce"],
         ["CalloftheHaunted","CalloftheHaunted"],
         ["GemKnightPearl","GemKnightPearl"],
-        ["FormulaSynchron","FormulaSynchron"]
+        ["FormulaSynchron","FormulaSynchron"],
+        ["DragonLordToken","DragonLordToken"],
+        ["BESBigCoreMK3","BESBigCoreMK3"],
+        ["JunkSynchron","JunkSynchron"],
+        ["Amaterasu","Amaterasu"],
+        ["GiltiGearfriedtheMagicalSteelKnight","GiltiGearfriedtheMagicalSteelKnight"]
         ];
 
         for ($i=0; $i < $quantityOfCards; $i++) { 
@@ -86,11 +91,10 @@
         if ($hardcore == 1){
             for ($i = 0 ; $i < $rows; $i++){
                 $randomCard = rand(0,count($cardsArray)-1);
-                array_push($extraCards, $cardsArray[$randomCard][0]);
+                $cardsArray[$randomCard][1] = "unique"; 
+                array_push($gameCards, $cardsArray[$randomCard]);
                 array_splice($cardsArray, $randomCard, 1);
             }
-
-            array_push($gameCards, $extraCards);
         }
 
         return $gameCards;
@@ -103,8 +107,15 @@
         while(count($cardsArray) > 0) { 
             $random = rand(0, count($cardsArray)-1);
 		 	$nameCard = $cardsArray[$random][0];
+            $isUnique=false;
+            if (count($cardsArray[$random])==2){
+                if ($cardsArray[$random][1]=="unique"){
+                    $isUnique =true;
+                }
+            }
+            $converted_isUnique = $isUnique ? 'true' : 'false';
 			echo "
-				<div class='card' name='$nameCard' state='unflipped' onclick='flip(this)'>	
+				<div class='card' name='$nameCard' state='unflipped' isUnique=$converted_isUnique onclick='flip(this)'>
 					<div class='card-inner'>
 						<div class='card-front'>
 							<img src='./images/$nameCard.png'>
@@ -116,11 +127,16 @@
 				</div>						
 				";
 
-			array_splice($cardsArray[$random], 0,1);
-
-            if(count($cardsArray[$random]) == 0) {
+            if ($isUnique){
                 array_splice($cardsArray, $random, 1);
+            } else {
+                array_splice($cardsArray[$random], 0,1);
+
+                if(count($cardsArray[$random]) == 0) {
+                    array_splice($cardsArray, $random, 1);
+                }
             }
+			
         }
     }
 
