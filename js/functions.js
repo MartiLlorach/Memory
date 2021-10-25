@@ -119,7 +119,6 @@ function innitGame(){
 	    const card = cards[index];
 	    card.addEventListener('contextmenu', event => {
 	        toggleMark(card);
-	        console.log('leftclick')
 	        event.preventDefault();
 	    });   
 	} 
