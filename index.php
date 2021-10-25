@@ -35,7 +35,7 @@
 
 			<div class="bottom-left">
 				<input type="submit" value="Play" formaction="game.php" class="btn btn-primary" id="btn-primary" disabled="true">
-				<button id="rankButton" class="btn btn-secondary">Ranking</button>
+				<button id="rankButton" class="btn btn-secondary" formaction="ranking.php">Ranking</button>
 				<div id="difficulty-selector-left">
 					<input type="radio" id="dif1" name="dif" value="1" checked>
 					<label for="dif1">Tristan</label>
