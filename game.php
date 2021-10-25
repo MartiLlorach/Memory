@@ -28,7 +28,30 @@
 			unset($_POST["playerName"]);
 			unset($_POST["playerTries"]);
 		}
-	
+		
+		$maxTime;
+		switch ($_POST["dif"]) {
+		 	case 1:
+		 		$maxTime = 45;
+		 		break;
+		 	case 2:
+		 		$maxTime = 60;
+		 		break;
+	 		case 3:
+		 		$maxTime = 90;
+		 		break;
+	 		case 4:
+		 		$maxTime = 120;
+		 		break;
+	 		case 5:
+		 		$maxTime = 140;
+		 		break;
+		 	case 6:
+		 		$maxTime = 220;
+		 		break;
+		} 
+
+		echo "<script> setTimer($maxTime) </script>";
 	?>
 	<div id="headerContainer">
 		<div id="cancelContainer">

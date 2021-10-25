@@ -106,7 +106,11 @@ function createCookie(name, value) {
 
 // ###############TIMER###############
 
+
 var maxT = 60; //limit time in seconds
+function setTimer(sec){
+	maxT= sec;
+}
 function innitGame(){
 	var cards = document.getElementsByClassName('card')
 	for (let index = 0; index < cards.length; index++) {
