@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<?php
+		session_start();
+		if (isset($_POST["playerName"])) {
+			$_SESSION['playerName'] = $_POST['playerName'];
+			$_SESSION["dif"] = $_POST["dif"];
+		}
+	?>
 	<meta charset="utf-8">
 	<title>Memory - Game</title>
 	<link rel="stylesheet" href="./styles/game.css" type="text/css">
 	<link rel="stylesheet" href="./styles/flip-card.css" type="text/css">
-	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_POST["dif"]?>.css" type="text/css">
+	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_SESSION["dif"]?>.css" type="text/css">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
 <body onload="innitTimer()">
 	<?php
-		// If we have a player in a POST variable, we save the data
-
-		if(isset($_POST["playerName"])){
-			saveResult($_POST["playerName"], $_POST["playerLevel"], $_POST["playerTime"], $_POST["playerTries"]);
-			unset($_POST["playerName"]);
-			unset($_POST["playerTries"]);
-		}
-		
 		$maxTime;
-		switch ($_POST["dif"]) {
+		switch ($_SESSION["dif"]) {
 		 	case 1:
 		 		$maxTime = 45;
 		 		break;
@@ -43,6 +42,7 @@
 
 		echo "<script> setTimer($maxTime) </script>";
 	?>
+	
 	<div id="headerContainer">
 		<div id="cancelContainer">
 
@@ -72,7 +72,7 @@
 		<!-- Card's board -->
 
 		<?php
-			generateCards($_POST["dif"]);		
+			generateCards($_SESSION["dif"]);		
 
 		?>
 	</div>

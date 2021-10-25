@@ -7,6 +7,12 @@
 </head>
 
 <body>
+	<?php
+		session_start();
+		include "backendFunctions/functions.php";
+		saveResult($_SESSION["playerName"], $_SESSION["dif"], $_COOKIE['time'], $_COOKIE['tries']-4,"0");
+	?>
+
 	<main>
 		<div class="winner">
 			<h1>YOU WIN!</h1>
@@ -17,17 +23,11 @@
 			<p>Congratulations! You won in <?php echo $_COOKIE["tries"]?> turns!</p>
 			<p>Insert your name to save your score!</p>
 
-			<!-- The form that manages all the player name and score -->
+			<!-- Buttons to go to all the options -->
 
-			<form method="POST" action="index.php">
-				<input class="inputField" id="playerName" name="playerName" type="text" placeholder="Your player name">
-				<input id="playerLevel" name="playerLevel" type="number" hidden value="0">
-				<input id="playerTime" name="playerTime" type="number" hidden value="0">
-				<input id="playerTries" name="playerTries" type="number" hidden value="<?php echo ($_COOKIE["tries"] -4)?>">
-				<input type="submit" value="Main menu" class="btn">
-				<input type="submit" value="Ranking" formaction="ranking.php" class="btn">
-				<input type="submit" value="Play Again" formaction="game.php" class="btn">
-			</form>
+			<a href="index.php"><button id="mainMenuButton" class="btn">Main Menu</button></a>
+			<a href="ranking.php"><button id="rankingButton" class="btn">Ranking</button></a>
+			<a href="game.php"><button id="playAgainButton" class="btn">Play Again</button></a>
 		</div>
 	</main>
 </body>
