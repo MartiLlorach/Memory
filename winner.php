@@ -13,13 +13,6 @@
 		saveResult($_SESSION["playerName"], "0",$_COOKIE['time'], $_COOKIE['tries']-4,"0");
 		$_SESSION["playerName"]=$_SESSION['playerName'];
 
-		/*
-		if(isset($_POST["playerName"])){
-			saveResult($_POST["playerName"], $_POST["playerLevel"], $_POST["playerTime"], $_POST["playerTries"]);
-			unset($_POST["playerName"]);
-			unset($_POST["playerTries"]);
-		}
-		*/
 	?>
 	<main>
 		<div class="winner">
