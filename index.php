@@ -36,7 +36,7 @@
 
 				<form method="POST" action="game.php">
 					<input id="playButton" class="btn btn-primary" type="submit" value="Play">
-					<button id="rankButton" class="btn btn-secondary">Ranking</button>
+					<button id="rankButton" class="btn btn-secondary" formaction="ranking.php">Ranking</button>
 					<div id="difficulty-selector-left">
 						<input type="radio" id="dif1" name="dif" value="1" checked>
 						<label for="dif1">Tristan</label>
