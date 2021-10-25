@@ -115,7 +115,11 @@
         ["MirrorForce","MirrorForce"],
         ["CalloftheHaunted","CalloftheHaunted"],
         ["GemKnightPearl","GemKnightPearl"],
-        ["FormulaSynchron","FormulaSynchron"]
+        ["FormulaSynchron","FormulaSynchron"],
+        ["MagicianofBlackChaos","MagicianofBlackChaos"],
+        ["BlackPendant","BlackPendant"],
+        ["GalaxySerpent","GalaxySerpent"],
+        ["DarkMagicianGirl","DarkMagicianGirl"]
         ];
 
         for ($i=0; $i < $quantityOfCards; $i++) { 
