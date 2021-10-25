@@ -13,6 +13,7 @@
 		<div class="rankingContainer">
 			<?php include 'innerRanking.php'; ?>
 		</div>
+			<button class="btn" onclick="window.location.href='index.php'">Main menu</button>
 	</div>	
 	<a href="index.php"><button class="btn">Main menu</button></a>
 </body>
