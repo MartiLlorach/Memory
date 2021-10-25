@@ -1,0 +1,16 @@
+.card{
+    width: 9vw;
+    height: 21vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh 4vw;
+    flex-grow: 1;
+    perspective: 1000px; 
+    color: transparent;
+}
+
+img {
+	width: 9vw;
+	height: 21vh;
+}
