@@ -65,7 +65,8 @@ function checkWin(){
 	solvedCards = document.querySelectorAll('[state="solved"]');
 
 	if (solvedCards.length == allCards.length) {
-		createCookie("tries", tries, "10");
+		createCookie("tries", tries);
+		createCookie("time", maxT);
 		document.getElementById('cardsContainer').setAttribute('class','flash'); //white flash when solved
 		setTimeout("window.open('winner.php','_self')",3000);
 	}
@@ -125,7 +126,7 @@ function secondPasses(){
 
 function validateBtn(input,button){
 	var btn = document.getElementById(button);
-	if (document.getElementById(input).value.length == 0) {
+	if (document.getElementById(input).length == 0) {
 		btn.disabled = true;
 
 	}else{
@@ -135,3 +136,4 @@ function validateBtn(input,button){
 	}
 	  
 }
+

@@ -7,8 +7,13 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body>
+<body >
 	<main>
+
+		<?php
+			session_start();
+			$name =$_SESSION['playerName'];
+		?>
 
 		<!-- Logo -->
 
@@ -20,7 +25,27 @@
 
 		<div class="userForm">
 			<form method="POST" action="game.php">
-				<input class="inputField" id="playerName" name="playerName" type="text" placeholder="Your player name" oninput="validateBtn('playerName','btn-primary')">
+				<!-- Create input text form void when Session is not actived, if Session is actived generate the input text with the value of Session that is the last username -->
+				<?php
+					
+					if (isset($_SESSION['playerName'])) {
+						echo '<input class="inputField" 
+								id="playerName" 
+								name="playerName" 
+								value="'.$name.'" 
+								type="text" 
+								placeholder="Your player name" 
+								oninput="validateBtn(\'playerName\',\'btn-primary\')">';
+					}else{
+						echo '<input class="inputField" 
+								id="playerName" 
+								name="playerName" 
+								type="text" 
+								placeholder="Your player name" 
+								oninput="validateBtn(\'playerName\',\'btn-primary\')">';
+					}
+					
+				?>
 		</div>
 
 		<div class="bottom-row">
@@ -28,7 +53,6 @@
 			<!-- Buttons -->
 
 			<div class="bottom-left">
-
 					<input type="submit" value="Play" formaction="game.php" class="btn btn-primary" id="btn-primary" disabled="true">
 				</form>
 				
