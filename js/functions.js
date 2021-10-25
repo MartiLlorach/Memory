@@ -78,14 +78,10 @@ function checkWin(){
 	allCards = document.querySelectorAll('[class="card"]');
 	solvedCards = document.querySelectorAll('[state="solved"]');
 
-<<<<<<< HEAD
+
 	if (solvedCards.length >= allCards.length - extraCards) {
-		createCookie("tries", tries, "10");
-=======
-	if (solvedCards.length == allCards.length) {
 		createCookie("tries", tries);
 		createCookie("time", maxT);
->>>>>>> integration
 		document.getElementById('cardsContainer').setAttribute('class','flash'); //white flash when solved
 		setTimeout("window.open('winner.php','_self')",3000);
 	}

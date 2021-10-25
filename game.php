@@ -17,14 +17,13 @@
 			$_SESSION['playerName'] = $_POST['playerName'];
 			$_SESSION["dif"] = $_POST["dif"];
 			$_SESSION["hardcoreMode"] = $hardcore;
-
 		}
 	?>
 	<meta charset="utf-8">
 	<title>Memory - Game</title>
 	<link rel="stylesheet" href="./styles/game.css" type="text/css">
 	<link rel="stylesheet" href="./styles/flip-card.css" type="text/css">
-	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_SESSION["dif"]?>.css" type="text/css">
+	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_SESSION["dif"].$hardcoreCSS?>.css" type="text/css">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
@@ -84,7 +83,8 @@
 		<!-- Card's board -->
 
 		<?php
-			generateCards($_SESSION["dif"]);		
+
+			generateCards($_SESSION["dif"], $_SESSION["hardcoreMode"]);	
 
 		?>
 	</div>

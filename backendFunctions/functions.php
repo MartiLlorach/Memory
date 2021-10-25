@@ -125,7 +125,7 @@
         ["BESBigCoreMK3","BESBigCoreMK3"],
         ["JunkSynchron","JunkSynchron"],
         ["Amaterasu","Amaterasu"],
-        ["GiltiGearfriedtheMagicalSteelKnight","GiltiGearfriedtheMagicalSteelKnight"]
+        ["GiltiGearfriedtheMagicalSteelKnight","GiltiGearfriedtheMagicalSteelKnight"],
         ["MagicianofBlackChaos","MagicianofBlackChaos"],
         ["BlackPendant","BlackPendant"],
         ["GalaxySerpent","GalaxySerpent"],
