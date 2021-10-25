@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="./styles/ranking.css">
 </head>
 <body>
-	<br>
 	<div class="mainDiv">
 		<div class="title">
 			<h2>Ranking</h2>

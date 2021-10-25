@@ -7,17 +7,21 @@
 <body>
 	<div>
 		<?php
-			$players = explode("\n", file_get_contents("HallOfFame.txt"));
-			array_pop($players);
+			include "./backendFunctions/functions.php";
+
+			$orderedPlayers = sortGames();
+
 			$cont = 1;
-			foreach ($players as $player) {
-				$player = explode("#", $player);
+			foreach ($orderedPlayers as $player) {
 				echo "
-				<div class=player>
-					<div class=left>$cont. $player[0]</div> <div class=right>punt</div>
-				</div>
-			";
-			}	
+					<div class=player>
+						<div class=left>$cont. $player[0]</div> <div class=right>$player[1] punt</div>
+					</div>
+				";
+				$cont++;
+			}
+				
+				
 		?>		
 	</div>
 </body>
