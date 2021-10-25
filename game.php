@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<?php
+		session_start();
+		if (isset($_POST["playerName"])) {
+			$_SESSION['playerName'] = $_POST['playerName'];
+			$_SESSION["dif"] = $_POST["dif"];
+		}
+	?>
 	<meta charset="utf-8">
 	<title>Memory - Game</title>
 	<link rel="stylesheet" href="./styles/game.css" type="text/css">
 	<link rel="stylesheet" href="./styles/flip-card.css" type="text/css">
+	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_SESSION["dif"]?>.css" type="text/css">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
 <body onload="innitTimer()">
 	<?php
-		session_start();
-		$_SESSION['playerName'] = $_POST['playerName'];
-		
+		$maxTime;
+		switch ($_SESSION["dif"]) {
+		 	case 1:
+		 		$maxTime = 45;
+		 		break;
+		 	case 2:
+		 		$maxTime = 60;
+		 		break;
+	 		case 3:
+		 		$maxTime = 90;
+		 		break;
+	 		case 4:
+		 		$maxTime = 120;
+		 		break;
+	 		case 5:
+		 		$maxTime = 140;
+		 		break;
+		 	case 6:
+		 		$maxTime = 220;
+		 		break;
+		} 
+
+		echo "<script> setTimer($maxTime) </script>";
 	?>
 	
 	<div id="headerContainer">
@@ -44,34 +72,9 @@
 		<!-- Card's board -->
 
 		<?php
+			generateCards($_SESSION["dif"]);		
 
-			// We make an array with all the cards and then we choose them randomly
-
-			$cardsArray = ["blueEyesWhiteDragon","blueEyesWhiteDragon", 
-			"darkMagician","darkMagician", 
-			"potOfGreed","potOfGreed", 
-			"redEyesBlackDragon","redEyesBlackDragon"];					
-					
-			foreach ($cardsArray as $key) {
-				$random = rand(0,count($cardsArray)-1);
-			 	$nameCard = $cardsArray[$random];
-
-				echo "
-					<div class='card' name='$nameCard' state='unflipped' onclick='flip(this)'>	
-						<div class='card-inner'>
-							<div class='card-front'>
-								<img src='./images/$nameCard.png'>
-							</div>
-							<div class='card-back'>
-								<img src='./images/backCards.jpeg'>
-							</div>
-						</div>
-					</div>						
-					";
-
-				array_splice($cardsArray,$random,1);
-			 }
-			?>
+		?>
 	</div>
 </body>
 </html>
