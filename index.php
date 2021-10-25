@@ -47,6 +47,10 @@
 					<input type="radio" id="dif6" name="dif" value="6">
 					<label for="dif6">Atem</label>
 				</div>
+				<div>
+					<input type="checkbox" id="hardcoreMode" name="hardcoreMode" value="activated">
+					<label for="hardcoreMode">Enter The Shadow Realm (Advanced Mode)</label>
+				</div>
 				</form>
 			</div>
 

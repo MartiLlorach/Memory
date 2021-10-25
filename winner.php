@@ -10,7 +10,7 @@
 	<?php
 		session_start();
 		include "backendFunctions/functions.php";
-		saveResult($_SESSION["playerName"], $_SESSION["dif"], $_COOKIE['time'], $_COOKIE['tries']-4,"0");
+		saveResult($_SESSION["playerName"], $_SESSION["dif"], $_COOKIE['time'], $_COOKIE['tries']-4, $_SESSION["hardcoreMode"]);
 	?>
 
 	<main>
