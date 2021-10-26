@@ -103,9 +103,7 @@ p {
 
 #containerEasterEgg{
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
+	top:  -100vh;
 	right: 0;
 }
 
@@ -114,23 +112,23 @@ p {
 	top:  20vh;
 	right: 50vw;
 }
-#leftArm{
-	position: absolute;
-	top:  30vh;
-	right: 60vw;
-}
-#leftLeg{
-	position: absolute;
-	top:  60vh;
-	right: 40vw;
-}
 #rightArm{
 	position: absolute;
-	top:  10vh;
-	right: 55vw;
+	top:  23vh;
+	right: 58vw;
 }
 #rightLeg{
 	position: absolute;
-	top:  60vh;
-	right: 40vw;
+	top:  39vh;
+	right: 54vw;
+}
+#leftArm{
+	position: absolute;
+	top:  23vh;
+	right: 42vw;
+}
+#leftLeg{
+	position: absolute;
+	top:  39vh;
+	right: 46vw;
 }

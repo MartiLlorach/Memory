@@ -1,4 +1,3 @@
-var exodiaEE=[];
 var flipped = 0;
 var tries = 0;
 
@@ -128,9 +127,27 @@ function secondPasses(){
 }
 
 function showExodia(){
+	var easterEgg = document.getElementById('containerEasterEgg');
+	easterEgg.setAttribute('style', 'top: 10vh');
+	var exodiaCards = easterEgg.childNodes
+	exodiaCards[1].setAttribute('state', 'solved')
+	exodiaCards[3].setAttribute('state', 'solved')
+	exodiaCards[5].setAttribute('state', 'solved')
+	exodiaCards[7].setAttribute('state', 'solved')
+	exodiaCards[9].setAttribute('state', 'solved')
+	setTimeout( () => {
+		easterEgg.setAttribute('style', 'top: -100vh');
+		exodiaCards[1].setAttribute('state', 'unflipped');
+		exodiaCards[3].setAttribute('state', 'unflipped');
+		exodiaCards[5].setAttribute('state', 'unflipped');
+		exodiaCards[7].setAttribute('state', 'unflipped');
+		exodiaCards[9].setAttribute('state', 'unflipped');
+	}, 2000)
+	
 	
 }
 
+var exodiaEE=[];
 function keyCode(event) {
   var x = event.keyCode;
   
@@ -138,7 +155,8 @@ function keyCode(event) {
   exodiaEE.push(x);
   
   if (exodiaEE[0]==69&&exodiaEE[1]==88&&exodiaEE[2]==79&&exodiaEE[3]==68&&exodiaEE[4]==73&&exodiaEE[5]==65) {
-	showExodia();			
+	showExodia();
+	exodiaEE = [];			
   }
   
 }

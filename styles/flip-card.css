@@ -19,6 +19,14 @@
   .card[state='solved'] .card-inner{
     transform: rotateY(180deg);
   }
+
+  .EGcard[state='flipped'] .card-inner{
+    transform: rotateY(180deg);
+  }
+
+  .EGcard[state='solved'] .card-inner{
+    transform: rotateY(180deg);
+  }
   
   /* Position the front and back side */
   .card-front, .card-back {
