@@ -109,7 +109,7 @@ function createCookie(name, value) {
 // ###############TIMER###############
 
 
-var maxT = 60; //limit time in seconds
+var maxT = 0; //limit time in seconds
 function setTimer(sec){
 	maxT= sec;
 }

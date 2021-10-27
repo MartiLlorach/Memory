@@ -29,7 +29,7 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body onload="innitGame() onkeydown="keyCode(event)">
+<body onload="innitGame()" onkeydown="keyCode(event)">
 
 	<?php
 		$maxTime;
