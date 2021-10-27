@@ -109,7 +109,7 @@ function createCookie(name, value) {
 // ###############TIMER###############
 
 
-var maxT = 60; //limit time in seconds
+var maxT = 0; //limit time in seconds
 function setTimer(sec){
 	maxT= sec;
 }
@@ -149,6 +149,48 @@ function secondPasses(){
 		document.getElementById('cardsContainer').setAttribute('class','redFlash'); //white flash when solved
 		setTimeout("window.open('gameOver.php','_self')",3000);
 	}
+}
+
+
+function showExodia(){
+	var easterEgg = document.getElementById('containerEasterEgg');
+	easterEgg.setAttribute('style', 'top: 10vh');
+	var exodiaCards = easterEgg.childNodes
+	exodiaCards[1].setAttribute('state', 'solved')
+	exodiaCards[3].setAttribute('state', 'solved')
+	exodiaCards[5].setAttribute('state', 'solved')
+	exodiaCards[7].setAttribute('state', 'solved')
+	exodiaCards[9].setAttribute('state', 'solved')
+	setTimeout( () => {
+		document.getElementById('exodiaGif').setAttribute('style','display: block');
+	}, 1500)
+	setTimeout( () => {
+		document.getElementById('exodiaGif').setAttribute('style','display: none');
+	}, 5500)
+	setTimeout( () => {
+		easterEgg.setAttribute('style', 'top: -100vh');
+		exodiaCards[1].setAttribute('state', 'unflipped');
+		exodiaCards[3].setAttribute('state', 'unflipped');
+		exodiaCards[5].setAttribute('state', 'unflipped');
+		exodiaCards[7].setAttribute('state', 'unflipped');
+		exodiaCards[9].setAttribute('state', 'unflipped');
+	}, 2000)
+	
+	
+}
+
+var exodiaEE=[];
+function keyCode(event) {
+  var x = event.keyCode;
+  
+  /*69,88,79,68,73,65*/
+  exodiaEE.push(x);
+  
+  if (exodiaEE[0]==69&&exodiaEE[1]==88&&exodiaEE[2]==79&&exodiaEE[3]==68&&exodiaEE[4]==73&&exodiaEE[5]==65) {
+	showExodia();
+	exodiaEE = [];			
+  }
+  
 }
 
 function validateBtn(input,button){

@@ -29,7 +29,8 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body onload="innitGame()">
+<body onload="innitGame()" onkeydown="keyCode(event)">
+
 	<?php
 		$maxTime;
 		switch ($_SESSION["dif"]) {
@@ -78,7 +79,6 @@
 			<p id="tries">Tries = 0</p>
 		</div>
 	</div>
-	
 
 	<div id="cardsContainer">
 
@@ -90,5 +90,8 @@
 
 		?>
 	</div>
+
+	<?php printEasterEgg() ?>
+
 </body>
 </html>
