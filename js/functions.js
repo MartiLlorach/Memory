@@ -136,6 +136,12 @@ function showExodia(){
 	exodiaCards[7].setAttribute('state', 'solved')
 	exodiaCards[9].setAttribute('state', 'solved')
 	setTimeout( () => {
+		document.getElementById('exodiaGif').setAttribute('style','display: block');
+	}, 1500)
+	setTimeout( () => {
+		document.getElementById('exodiaGif').setAttribute('style','display: none');
+	}, 5500)
+	setTimeout( () => {
 		easterEgg.setAttribute('style', 'top: -100vh');
 		exodiaCards[1].setAttribute('state', 'unflipped');
 		exodiaCards[3].setAttribute('state', 'unflipped');

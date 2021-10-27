@@ -115,7 +115,7 @@ p {
 #rightArm{
 	position: absolute;
 	top:  23vh;
-	right: 58vw;
+	right: 57vw;
 }
 #rightLeg{
 	position: absolute;
@@ -125,10 +125,26 @@ p {
 #leftArm{
 	position: absolute;
 	top:  23vh;
-	right: 42vw;
+	right: 43vw;
 }
 #leftLeg{
 	position: absolute;
 	top:  39vh;
 	right: 46vw;
+}
+#exodiaGif{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	right: 0;	
+	text-align: center;
+	background-color: rgba(0,0,0,0);
+	display: none;
+}
+#exodiaGif img{
+	margin-top: 10vh;
+	width: 50%;
+	height: auto;
+	box-shadow: 0 0 100px 300px black;
 }

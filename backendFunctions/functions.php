@@ -215,6 +215,9 @@
                     </div>
                 </div>
             </div>
+            <div id='exodiaGif'>
+                <img src='./images/exodia.gif'>
+            </div>
         ";
     }
 
