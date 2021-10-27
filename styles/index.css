@@ -6,7 +6,7 @@ main {
 }
 .logo{
 	color: transparent;
-	margin: 0 auto 50px 0;
+	margin: 0 auto 0 0;
 	-webkit-text-stroke: 3px black; 
 	font-family: 'yugioh';
 	font-size: 70px;
@@ -23,6 +23,7 @@ main {
 .bottom-row{
 	display:  flex;
 	flex-direction: row;
+	margin-top: 50px;
 }
 .btn{
 	margin: 20px 0;
@@ -33,24 +34,27 @@ main {
     background-position: center;
 }
 .btn-primary{
-	height: 200px;
+	height: 150px;
 	width: 60%;
 	font-size: 130px;
-	margin-top: 100px; /*to position the play button*/
+	margin-top: 0; /*to position the play button*/
+	margin-right: 20px;
 }
 .btn-secondary{
 	height: 100px;
 	width: 40%;
 	font-size: 70px;
+	margin-top: 0; 
 }
 .bottom-left{
 	text-align: center;
 	width: 50%;
-	padding-left: 200px;
+	padding-left: 100px;
+	margin-right: 50px;
 }
 .bottom-right{
 	width: 50%;
-	padding-right: 200px;
+	padding-right: 100px;
 	margin: auto 0;
 	text-align: justify;
 }
@@ -59,7 +63,7 @@ body {
 	font-size: 40px;
 }
 
-p, h2 {
+p, h2, label {
 	text-shadow:	0 0 10px #DFDCE4,
 					10px -10px 10px #DFDCE4,
 					15px -15px 10px #DFDCE4,
@@ -69,4 +73,23 @@ p, h2 {
 					0 0 10px #DFDCE4,
 					0 0 10px #DFDCE4
 	;
+}
+
+.inputField {
+	font-size: 40px;
+	text-align: center
+}
+
+.nav-buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.bottom-left > h2 {
+	margin: 0;
+}
+
+.bottom-right > h2 {
+	margin-top: 0;
 }
