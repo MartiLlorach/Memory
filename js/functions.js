@@ -1,5 +1,6 @@
 var flipped = 0;
 var tries = 0;
+var extraCards = 0
 
 // This function contains de logic of the game
 
@@ -22,6 +23,19 @@ function flip(card){
 			setTimeout("unflipCards(flippedCards)", 2000);
 		}
 	}
+}
+
+var marked=0
+function toggleMark(card){
+	if (card.getAttribute('state') == 'marked'){
+		marked--;
+		card.setAttribute('state', 'unflipped');
+		card.childNodes[1].childNodes[3].childNodes[1].setAttribute('src','./images/backCards.jpeg');
+  	} else if(marked<extraCards && card.getAttribute("state") == "unflipped"){
+  		marked++;
+  		card.setAttribute('state', 'marked');
+  		card.childNodes[1].childNodes[3].childNodes[1].setAttribute('src','./images/markedCard.jpeg');
+  	}
 }
 
 // This function adds the state "flipped" to a card and changes his image
@@ -64,8 +78,10 @@ function checkWin(){
 	allCards = document.querySelectorAll('[class="card"]');
 	solvedCards = document.querySelectorAll('[state="solved"]');
 
-	if (solvedCards.length == allCards.length) {
-		createCookie("tries", tries, "10");
+
+	if (solvedCards.length >= allCards.length - extraCards) {
+		createCookie("tries", tries);
+		createCookie("time", maxT);
 		document.getElementById('cardsContainer').setAttribute('class','flash'); //white flash when solved
 		setTimeout("window.open('winner.php','_self')",3000);
 	}
@@ -88,3 +104,105 @@ function createCookie(name, value) {
     document.cookie = escape(name) + "=" + 
         escape(value) + "; path=/";
 }
+
+
+// ###############TIMER###############
+
+
+var maxT = 0; //limit time in seconds
+function setTimer(sec){
+	maxT= sec;
+}
+function innitGame(){
+	var cards = document.getElementsByClassName('card')
+	for (let index = 0; index < cards.length; index++) {
+	    const card = cards[index];
+	    card.addEventListener('contextmenu', event => {
+	        toggleMark(card);
+	        event.preventDefault();
+	    });   
+	} 
+	secondPasses();
+	var clock = setInterval('secondPasses()', 1000);
+}
+function secondPasses(){
+	let timer = document.getElementById('timer');
+	let min = Math.floor(maxT/60);
+	let sec = maxT - min*60;
+	let minS = min;
+	let secS = sec;
+
+	if (min.toString().length == 1){
+		minS = '0' + min;
+	}
+	if (sec.toString().length == 1){
+		secS = '0' + sec;
+	}
+
+	if (min==0) timer.innerHTML='00:'+secS;
+	else timer.innerHTML=minS+':'+secS;
+
+	maxT--;
+
+	if (maxT<=0){
+		maxT=0;
+		document.getElementById('cardsContainer').setAttribute('class','redFlash'); //white flash when solved
+		setTimeout("window.open('gameOver.php','_self')",3000);
+	}
+}
+
+
+function showExodia(){
+	var easterEgg = document.getElementById('containerEasterEgg');
+	easterEgg.setAttribute('style', 'top: 10vh');
+	var exodiaCards = easterEgg.childNodes
+	exodiaCards[1].setAttribute('state', 'solved')
+	exodiaCards[3].setAttribute('state', 'solved')
+	exodiaCards[5].setAttribute('state', 'solved')
+	exodiaCards[7].setAttribute('state', 'solved')
+	exodiaCards[9].setAttribute('state', 'solved')
+	setTimeout( () => {
+		document.getElementById('exodiaGif').setAttribute('style','display: block');
+	}, 1500)
+	setTimeout( () => {
+		document.getElementById('exodiaGif').setAttribute('style','display: none');
+	}, 5500)
+	setTimeout( () => {
+		easterEgg.setAttribute('style', 'top: -100vh');
+		exodiaCards[1].setAttribute('state', 'unflipped');
+		exodiaCards[3].setAttribute('state', 'unflipped');
+		exodiaCards[5].setAttribute('state', 'unflipped');
+		exodiaCards[7].setAttribute('state', 'unflipped');
+		exodiaCards[9].setAttribute('state', 'unflipped');
+	}, 2000)
+	
+	
+}
+
+var exodiaEE=[];
+function keyCode(event) {
+  var x = event.keyCode;
+  
+  /*69,88,79,68,73,65*/
+  exodiaEE.push(x);
+  
+  if (exodiaEE[0]==69&&exodiaEE[1]==88&&exodiaEE[2]==79&&exodiaEE[3]==68&&exodiaEE[4]==73&&exodiaEE[5]==65) {
+	showExodia();
+	exodiaEE = [];			
+  }
+  
+}
+
+function validateBtn(input,button){
+	var btn = document.getElementById(button);
+	if (document.getElementById(input).value.length == 0) {
+		btn.disabled = true;
+
+	}else{
+
+		btn.disabled = false;
+
+	}
+	  
+}
+
