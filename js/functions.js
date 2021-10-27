@@ -31,7 +31,7 @@ function toggleMark(card){
 		marked--;
 		card.setAttribute('state', 'unflipped');
 		card.childNodes[1].childNodes[3].childNodes[1].setAttribute('src','./images/backCards.jpeg');
-  	} else if(marked<extraCards){
+  	} else if(marked<extraCards && card.getAttribute("state") == "unflipped"){
   		marked++;
   		card.setAttribute('state', 'marked');
   		card.childNodes[1].childNodes[3].childNodes[1].setAttribute('src','./images/markedCard.jpeg');
