@@ -153,7 +153,7 @@ function secondPasses(){
 
 function validateBtn(input,button){
 	var btn = document.getElementById(button);
-	if (document.getElementById(input).length == 0) {
+	if (document.getElementById(input).value.length == 0) {
 		btn.disabled = true;
 
 	}else{

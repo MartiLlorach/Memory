@@ -29,23 +29,28 @@
 			<!-- Buttons -->
 
 			<div class="bottom-left">
-				<input type="submit" value="Play" formaction="game.php" class="btn btn-primary" id="btn-primary" disabled="true">
-				<button id="rankButton" class="btn btn-secondary" formaction="ranking.php">Ranking</button>
-				<div id="difficulty-selector-left">
-					<input type="radio" id="dif1" name="dif" value="1" checked>
-					<label for="dif1">Tristan</label>
-					<input type="radio" id="dif2" name="dif" value="2">
-					<label for="dif2">Joey</label>
-					<input type="radio" id="dif3" name="dif" value="3">
-					<label for="dif3">Bakura</label>
+				<div class="nav-buttons">
+					<input type="submit" value="Play" formaction="game.php" class="btn btn-primary" id="btn-primary" disabled="true">
+					<button id="rankButton" class="btn btn-secondary" formaction="ranking.php">Ranking</button>
 				</div>
-				<div id="difficulty-selector-right">
-					<input type="radio" id="dif4" name="dif" value="4">
-					<label for="dif4">Yugi</label>
-					<input type="radio" id="dif5" name="dif" value="5">
-					<label for="dif5">Kaiba</label>
-					<input type="radio" id="dif6" name="dif" value="6">
-					<label for="dif6">Atem</label>
+					<h2>Difficulty Selector</h2>
+					<div class="difficulty-buttons">
+					<div id="difficulty-selector-left">
+						<input type="radio" id="dif1" name="dif" value="1" checked>
+						<label for="dif1">Tristan</label>
+						<input type="radio" id="dif2" name="dif" value="2">
+						<label for="dif2">Joey</label>
+						<input type="radio" id="dif3" name="dif" value="3">
+						<label for="dif3">Bakura</label>
+					</div>
+					<div id="difficulty-selector-right">
+						<input type="radio" id="dif4" name="dif" value="4">
+						<label for="dif4">Yugi</label>
+						<input type="radio" id="dif5" name="dif" value="5">
+						<label for="dif5">Kaiba</label>
+						<input type="radio" id="dif6" name="dif" value="6">
+						<label for="dif6">Atem</label>
+					</div>
 				</div>
 				<div>
 					<input type="checkbox" id="hardcoreMode" name="hardcoreMode" value="activated">
