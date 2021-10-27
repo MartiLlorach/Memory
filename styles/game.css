@@ -1,23 +1,48 @@
-@font-face {
-    font-family: 'paragraph'; /*a name to be used later*/
-    src: url('../fonts/Matrix.ttf'); /*URL to font*/
-}
+@import "general.css";
 
 body{
-	overflow: hidden;
-	height: 100vh;
-	font-family: 'paragraph';
-	font-size: 30px;
-	background-image: url("../images/background.jpg");
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+	font-size: 40px;
 }
-#counterContainer{
-	width: 100px;
+
+#headerContainer{
+	width: 85%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	margin-top: 60px;	
+}
+#cancelContainer{
+	width: 200px;
+	height: 70px;
+	margin-top: 30px;
+	margin-left: 0px;
+}
+
+#cancelContainer .btn{
+	width: 100%;
+	height: 100%;
+	font-size: 45px;
+}
+
+#timerContainer{
+	width: 300px;
 	height: 40px;
 	margin-top: 60px;
-	margin-left: 81%;
+	
+	margin-left: auto;
+}
+#timerContainer p{
+	display: inline;
+}
+
+
+#counterContainer{
+	width: 200px;
+	height: 40px;
+
+	margin-top: 60px;
+	margin-left: auto;
 }
 .flash{
 	animation-name: flash;
@@ -28,8 +53,17 @@ body{
 	50% {box-shadow: 0 0 0px transparent;}
 	75% {box-shadow: 0 0 50px white;}
 	100% {box-shadow: 0 0 0px transparent;}
-
-}	
+}
+.redFlash{
+	animation-name: redFlash;
+    animation-duration: 2s;
+}
+@keyframes redFlash {
+	0% {box-shadow: 0 0 0px transparent;}
+	50% {box-shadow: 0 0 0px transparent;}
+	75% {box-shadow: 0 0 50px #E92924;}
+	100% {box-shadow: 0 0 0px transparent;}
+}		
 
 #cardsContainer{
 	width: 85%;
@@ -41,15 +75,7 @@ body{
 	background-color: #33302F;
 	border: 5px solid #858585;
 }
-.card{
-	width: 20%;
-	height: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 1%;
-	flex-grow: 1;
-}
+
 table{
 	width: 100%;
 	height: 100%;
@@ -73,4 +99,52 @@ p {
 					0 0 10px #DFDCE4
 	;
 	margin: 0;
+}
+
+#containerEasterEgg{
+	position: absolute;
+	top:  -100vh;
+	right: 0;
+}
+
+#head{
+	position: absolute;
+	top:  20vh;
+	right: 50vw;
+}
+#rightArm{
+	position: absolute;
+	top:  23vh;
+	right: 57vw;
+}
+#rightLeg{
+	position: absolute;
+	top:  39vh;
+	right: 54vw;
+}
+#leftArm{
+	position: absolute;
+	top:  23vh;
+	right: 43vw;
+}
+#leftLeg{
+	position: absolute;
+	top:  39vh;
+	right: 46vw;
+}
+#exodiaGif{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	right: 0;	
+	text-align: center;
+	background-color: rgba(0,0,0,0);
+	display: none;
+}
+#exodiaGif img{
+	margin-top: 10vh;
+	width: 50%;
+	height: auto;
+	box-shadow: 0 0 100px 300px black;
 }
