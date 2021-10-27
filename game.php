@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<?php
+
+		session_start();
+
+		if (isset($_POST["hardcoreMode"])) {
+			$hardcore = 1;
+		} else {
+			$hardcore = 0;
+		}
+
+		if (isset($_POST["playerName"])) {
+			$_SESSION['playerName'] = $_POST['playerName'];
+			$_SESSION["dif"] = $_POST["dif"];
+			$_SESSION["hardcoreMode"] = $hardcore;
+			$_SESSION["hardcoreCSS"] = "";
+			if($hardcore == 1){
+				$_SESSION["hardcoreCSS"] = "h";
+			}
+		}
+	?>
 	<meta charset="utf-8">
 	<title>Memory - Game</title>
 	<link rel="stylesheet" href="./styles/game.css" type="text/css">
 	<link rel="stylesheet" href="./styles/flip-card.css" type="text/css">
-	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_POST["dif"]?>.css" type="text/css">
+	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_SESSION["dif"].$_SESSION["hardcoreCSS"]?>.css" type="text/css">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body onload="innitTimer()" onkeydown="keyCode(event)">
-	<?php
-		// If we have a player in a POST variable, we save the data
+<body onload="innitGame() onkeydown="keyCode(event)">
 
-		if(isset($_POST["playerName"])){
-			saveResult($_POST["playerName"], $_POST["playerLevel"], $_POST["playerTime"], $_POST["playerTries"]);
-			unset($_POST["playerName"]);
-			unset($_POST["playerTries"]);
-		}
-		
+	<?php
 		$maxTime;
-		switch ($_POST["dif"]) {
+		switch ($_SESSION["dif"]) {
 		 	case 1:
 		 		$maxTime = 45;
 		 		break;
@@ -43,6 +56,7 @@
 
 		echo "<script> setTimer($maxTime) </script>";
 	?>
+	
 	<div id="headerContainer">
 		<div id="cancelContainer">
 
@@ -71,7 +85,8 @@
 		<!-- Card's board -->
 
 		<?php
-			generateCards($_POST["dif"]);		
+
+			generateCards($_SESSION["dif"], $_SESSION["hardcoreMode"]);	
 
 		?>
 	</div>

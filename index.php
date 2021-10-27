@@ -4,22 +4,10 @@
 	<meta charset="utf-8">
 	<title>Memory - Main Page</title>
 	<link rel="stylesheet" type="text/css" href="./styles/index.css">
+	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body>
-	<?php
-		include "backendFunctions/functions.php";
-
-		// If we have a player in a POST variable, we save the data
-
-		if(isset($_POST["playerName"])){
-			saveResult($_POST["playerName"],$_POST["playerLevel"], $_POST["playerTime"], $_POST["playerTries"]);
-			unset($_POST["playerName"]);
-			unset($_POST["playerTries"]);
-		}
-	
-	?>
-
+<body >
 	<main>
 
 		<!-- Logo -->
@@ -27,34 +15,43 @@
 		<div class="logo">
 			<h1>Me-Mo-Ry!</h1>
 		</div>
-		
+
+		<!-- Form Username -->
+
+		<div class="userForm">
+			<form method="POST" action="game.php">
+				<input class="inputField" id="playerName" name="playerName" type="text" placeholder="Your player name" oninput="validateBtn('playerName', 'btn-primary')">
+
+		</div>
+
 		<div class="bottom-row">
 
 			<!-- Buttons -->
 
 			<div class="bottom-left">
-
-				<form method="POST" action="game.php">
-					<input id="playButton" class="btn btn-primary" type="submit" value="Play">
-					<button id="rankButton" class="btn btn-secondary">Ranking</button>
-					<div id="difficulty-selector-left">
-						<input type="radio" id="dif1" name="dif" value="1" checked>
-						<label for="dif1">Tristan</label>
-						<input type="radio" id="dif2" name="dif" value="2">
-						<label for="dif2">Joey</label>
-						<input type="radio" id="dif3" name="dif" value="3">
-						<label for="dif3">Bakura</label>
-					</div>
-					<div id="difficulty-selector-right">
-						<input type="radio" id="dif4" name="dif" value="4">
-						<label for="dif4">Yugi</label>
-						<input type="radio" id="dif5" name="dif" value="5">
-						<label for="dif5">Kaiba</label>
-						<input type="radio" id="dif6" name="dif" value="6">
-						<label for="dif6">Atem</label>
-					</div>
+				<input type="submit" value="Play" formaction="game.php" class="btn btn-primary" id="btn-primary" disabled="true">
+				<button id="rankButton" class="btn btn-secondary" formaction="ranking.php">Ranking</button>
+				<div id="difficulty-selector-left">
+					<input type="radio" id="dif1" name="dif" value="1" checked>
+					<label for="dif1">Tristan</label>
+					<input type="radio" id="dif2" name="dif" value="2">
+					<label for="dif2">Joey</label>
+					<input type="radio" id="dif3" name="dif" value="3">
+					<label for="dif3">Bakura</label>
+				</div>
+				<div id="difficulty-selector-right">
+					<input type="radio" id="dif4" name="dif" value="4">
+					<label for="dif4">Yugi</label>
+					<input type="radio" id="dif5" name="dif" value="5">
+					<label for="dif5">Kaiba</label>
+					<input type="radio" id="dif6" name="dif" value="6">
+					<label for="dif6">Atem</label>
+				</div>
+				<div>
+					<input type="checkbox" id="hardcoreMode" name="hardcoreMode" value="activated">
+					<label for="hardcoreMode">Enter The Shadow Realm (Advanced Mode)</label>
+				</div>
 				</form>
-
 			</div>
 
 			<!-- Instructions -->

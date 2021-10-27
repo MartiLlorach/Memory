@@ -1,5 +1,6 @@
 var flipped = 0;
 var tries = 0;
+var extraCards = 0
 
 // This function contains de logic of the game
 
@@ -22,6 +23,19 @@ function flip(card){
 			setTimeout("unflipCards(flippedCards)", 2000);
 		}
 	}
+}
+
+var marked=0
+function toggleMark(card){
+	if (card.getAttribute('state') == 'marked'){
+		marked--;
+		card.setAttribute('state', 'unflipped');
+		card.childNodes[1].childNodes[3].childNodes[1].setAttribute('src','./images/backCards.jpeg');
+  	} else if(marked<extraCards && card.getAttribute("state") == "unflipped"){
+  		marked++;
+  		card.setAttribute('state', 'marked');
+  		card.childNodes[1].childNodes[3].childNodes[1].setAttribute('src','./images/markedCard.jpeg');
+  	}
 }
 
 // This function adds the state "flipped" to a card and changes his image
@@ -64,8 +78,10 @@ function checkWin(){
 	allCards = document.querySelectorAll('[class="card"]');
 	solvedCards = document.querySelectorAll('[state="solved"]');
 
-	if (solvedCards.length == allCards.length) {
-		createCookie("tries", tries, "10");
+
+	if (solvedCards.length >= allCards.length - extraCards) {
+		createCookie("tries", tries);
+		createCookie("time", maxT);
 		document.getElementById('cardsContainer').setAttribute('class','flash'); //white flash when solved
 		setTimeout("window.open('winner.php','_self')",3000);
 	}
@@ -92,11 +108,20 @@ function createCookie(name, value) {
 
 // ###############TIMER###############
 
-var maxT = 100; //limit time in seconds
+
+var maxT = 60; //limit time in seconds
 function setTimer(sec){
 	maxT= sec;
 }
-function innitTimer(){
+function innitGame(){
+	var cards = document.getElementsByClassName('card')
+	for (let index = 0; index < cards.length; index++) {
+	    const card = cards[index];
+	    card.addEventListener('contextmenu', event => {
+	        toggleMark(card);
+	        event.preventDefault();
+	    });   
+	} 
 	secondPasses();
 	var clock = setInterval('secondPasses()', 1000);
 }
@@ -125,6 +150,7 @@ function secondPasses(){
 		setTimeout("window.open('gameOver.php','_self')",3000);
 	}
 }
+
 
 function showExodia(){
 	var easterEgg = document.getElementById('containerEasterEgg');
@@ -166,3 +192,17 @@ function keyCode(event) {
   }
   
 }
+
+function validateBtn(input,button){
+	var btn = document.getElementById(button);
+	if (document.getElementById(input).length == 0) {
+		btn.disabled = true;
+
+	}else{
+
+		btn.disabled = false;
+
+	}
+	  
+}
+
