@@ -19,15 +19,17 @@
 		</div>
 
 		<div class="player-input-row">
-
-			<p>Congratulations! You won in <?php echo $_COOKIE["tries"]?> turns!</p>
-			<p>Insert your name to save your score!</p>
+			<div class="message">
+				<p>Congratulations! You won in <?php echo $_COOKIE["tries"]?> turns!</p>
+				<p>Insert your name to save your score!</p>
+			</div>
 
 			<!-- Buttons to go to all the options -->
-
-			<a href="index.php"><button id="mainMenuButton" class="btn">Main Menu</button></a>
-			<a href="ranking.php"><button id="rankingButton" class="btn">Ranking</button></a>
-			<a href="game.php"><button id="playAgainButton" class="btn">Play Again</button></a>
+			<div class="navigation">
+				<a href="index.php"><button id="mainMenuButton" class="btn">Main Menu</button></a>
+				<a href="ranking.php"><button id="rankingButton" class="btn">Ranking</button></a>
+				<a href="game.php"><button id="playAgainButton" class="btn">Play Again</button></a>
+			</div>
 		</div>
 	</main>
 </body>

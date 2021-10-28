@@ -13,7 +13,9 @@
 		<div class="rankingContainer">
 			<?php include 'innerRanking.php'; ?>
 		</div>
-		<a href="index.php"><button class="btn">Main menu</button></a>
+		<div class="button-container">
+			<a href="index.php"><button class="btn">Main menu</button></a>
+		</div>
 	</div>	
 	
 </body>
