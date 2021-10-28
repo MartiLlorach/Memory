@@ -1,10 +1,10 @@
 @import "general.css";
 
 .winner{
-	padding: 0 0 100px 0;
+	padding: 10vh 0 20vh 0;
 	margin: auto 0; 
 	font-family: 'paragraph';
-	font-size: 100px;
+	font-size: 6vw;
 	color:transparent;
 	animation: white-pan 0.5s linear, white-pan 0.5s 0.4s linear, flash-to-color 1s 0.9s linear;
 	background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6671043417366946) 12%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 75%, rgba(255,255,255,0.6671043417366946) 88%, rgba(255,255,255,0) 100%);
@@ -12,6 +12,10 @@
 	background-size: 80%;
 	-webkit-background-clip: text;
 	text-shadow: 0 0 0 #33302F, 1px 0 0 #E92924, -1px 0 0 #E92924, 0 1px 0 #E92924, 0 -1px 0 #E92924;
+}
+
+.winner > h1 {
+	margin: 0;
 }
 
 @keyframes white-pan {
@@ -46,23 +50,21 @@
 	}
 }
 
-.bottom-row{
-	display:  flex;
-	flex-direction: row;
-	margin: 100px;
-}
 main {
 	margin: 0px 100px 0 100px;
 	display: flex;
 	flex-direction: column;
 	
 }
+
 .bottom-left{
 	width: 50%;
 }
+
 .bottom-right{
 	width: 50%;
 }
+
 .btn-primary{
 	background-color: #3B6EF5;
 	height: 100px;
@@ -82,18 +84,19 @@ main {
 }
 .btn{
 	font-size: 50px;
-	width: 20%;
-	height: 100px;
+	width: 20vw;
+	height: 15vh;
 	font-family: 'paragraph';
-	margin: 20px 0;
+	margin: 6vh 2vw 0;
 	color: #DFDCE4;
 	background-image: url('../images/button.jpeg');
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 body {
-	font-size: 40px;
+	font-size: 2.5vw;
 }
 
 p {
@@ -108,4 +111,10 @@ p {
 					0 0 10px #DFDCE4,
 					0 0 10px #DFDCE4
 	;
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

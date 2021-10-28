@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Memory - Game Over</title>
 	<link rel="stylesheet" type="text/css" href="./styles/gameOver.css">
+	<link rel="stylesheet" type="text/css" href="./styles/winner.css">
 </head>
 
 <body>
