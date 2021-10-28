@@ -1,5 +1,8 @@
 var flipped = 0;
 var tries = 0;
+var errors = 0;
+var level = 0;
+var advanced = 0;
 var extraCards = 0
 
 // This function contains de logic of the game
@@ -21,6 +24,7 @@ function flip(card){
 
 		} else {
 			setTimeout("unflipCards(flippedCards)", 2000);
+			errors++;
 		}
 	}
 }
@@ -109,7 +113,7 @@ function createCookie(name, value) {
 // ###############TIMER###############
 
 
-var maxT = 0; //limit time in seconds
+var maxT = 60000; //limit time in seconds
 function setTimer(sec){
 	maxT= sec;
 }
@@ -143,6 +147,7 @@ function secondPasses(){
 	else timer.innerHTML=minS+':'+secS;
 
 	maxT--;
+	printPlayers();
 
 	if (maxT<=0){
 		maxT=0;
@@ -206,3 +211,44 @@ function validateBtn(input,button){
 	  
 }
 
+// errors = ?;
+// time = ?;
+// level = ?;
+// advanced = ?;
+var bestN;
+var userN;
+var bestP;
+var userP;
+
+function innitJSvars(bestName, bestPoints, userName, gameLevel, gameAdvanced){
+	bestN = bestName;
+	bestP = bestPoints;
+	userN = userName;
+	level = gameLevel;
+	advanced = gameAdvanced;
+}
+
+function printBest(){
+	userP = (10 + ((maxT+5)**(level/2)) - (errors**(1/2) * 5));
+	userP = Math.floor(userP + (1.5 * userP * advanced));
+	if (userP <= 0){
+		userP = 0;
+	}
+	if (bestP>userP) {
+		document.getElementById('best').innerHTML = "THE BEST: "+bestN+" "+bestP+" points";
+	} else {
+		document.getElementById('best').innerHTML = "THE BEST: "+userN+" "+userP+" points";
+	}
+}
+function printUser(){
+	userP = (10 + ((maxT+5)**(level/2)) - (errors**(1/2) * 5));
+	userP = Math.floor(userP + (1.5 * userP * advanced));
+	if (userP <= 0){
+		userP = 0;
+	}
+	document.getElementById('user').innerHTML = "YOU: "+userN+" "+userP+" points";
+}
+function printPlayers(){
+	printBest();
+	printUser();
+}
