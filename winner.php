@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+	
 	<meta charset="utf-8">
 	<title>Memory - Winner</title>
 	<link rel="stylesheet" type="text/css" href="./styles/winner.css">
+	<script type="text/javascript" src="js/functions.js">
+		
+	</script>
+	
 </head>
 
-<body>
+<body >
+	<script type="text/javascript" src="./js/functions.js"></script>
+	<script type="text/javascript">
+		setTimeout(()=>{
+			audioApplause();
+		}, 4000)
+	</script>
+
 	<?php
 		session_start();
 		include "backendFunctions/functions.php";
 		saveResult($_SESSION["playerName"], $_SESSION["dif"], $_COOKIE['time'], $_COOKIE['tries']-4, $_SESSION["hardcoreMode"]);
 	?>
-
+	
 	<main>
 		<div class="winner">
 			<h1>YOU WIN!</h1>
@@ -30,5 +43,7 @@
 			<a href="game.php"><button id="playAgainButton" class="btn">Play Again</button></a>
 		</div>
 	</main>
+	
 </body>
+
 </html>

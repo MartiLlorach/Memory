@@ -7,6 +7,12 @@
 </head>
 
 <body>
+	<script type="text/javascript" src="./js/functions.js"></script>
+	<script type="text/javascript">
+		setTimeout(()=>{
+			audioYouLose();
+		}, 6000)
+	</script>
 	<main>
 		<div class="loser">
 			<h1>
