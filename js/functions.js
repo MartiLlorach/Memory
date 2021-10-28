@@ -151,8 +151,9 @@ function secondPasses(){
 	if (maxT<=0){
 		maxT=0;
 		document.getElementById('cardsContainer').setAttribute('class','redFlash'); //white flash when solved
-		
-		setTimeout("window.open('gameOver.php','_self')" ,3000);		
+
+		setTimeout("window.open('gameOver.php','_self')",3000);
+
 	}
 }
 
@@ -210,6 +211,7 @@ function validateBtn(input,button){
 	}
 	  
 }
+
 
 function audioApplause(){
 	var app = new Audio('../Sounds/applause.wav');
