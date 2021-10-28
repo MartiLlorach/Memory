@@ -5,6 +5,9 @@
 
 		session_start();
 
+		include "./backendFunctions/functions.php";
+		
+
 		if (isset($_POST["hardcoreMode"])) {
 			$hardcore = 1;
 		} else {
@@ -25,7 +28,7 @@
 	<title>Memory - Game</title>
 	<link rel="stylesheet" href="./styles/game.css" type="text/css">
 	<link rel="stylesheet" href="./styles/flip-card.css" type="text/css">
-	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php include "backendFunctions/functions.php"; echo $_SESSION["dif"].$_SESSION["hardcoreCSS"]?>.css" type="text/css">
+	<link rel="stylesheet" href="./styles/difficultyStyles/cardStyleDifficulty<?php echo $_SESSION["dif"].$_SESSION["hardcoreCSS"]?>.css" type="text/css">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
@@ -54,8 +57,23 @@
 		 		break;
 		} 
 
-		echo "<script> setTimer($maxTime) </script>";
+		$orderedPlayers = sortGames();
+		$best = $orderedPlayers[0];
+
+		echo "<script> 
+				setTimer($maxTime);
+				innitJSvars('$best[0]', '$best[1]', '$_SESSION[playerName]','$_SESSION[dif]', '$hardcore');
+			</script>";
 	?>
+
+	<div id="players">
+		<p id="best">
+			
+		</p>
+		<p id="user">
+			
+		</p>
+	</div>
 	
 	<div id="headerContainer">
 		<div id="cancelContainer">
