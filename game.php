@@ -62,7 +62,7 @@
 
 		echo "<script> 
 				setTimer($maxTime);
-				innitJSvars('$best[0]', $best[1], '$_SESSION[playerName]',$_SESSION[dif], $hardcore);	 
+				innitJSvars('$best[0]', '$best[1]', '$_SESSION[playerName]','$_SESSION[dif]', '$hardcore');
 			</script>";
 	?>
 
