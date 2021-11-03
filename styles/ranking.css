@@ -26,7 +26,7 @@ body {
 
 .title {
 	color: transparent;
-	-webkit-text-stroke: 3px black; 
+	-webkit-text-stroke: 3px black;
 	font-family: 'yugioh';
 	font-size: 70px;
 	text-shadow: 10px 0 1px rgba(0, 0, 0, 0.5), 0 0 #C0C0C0,
@@ -34,7 +34,7 @@ body {
 				-4px 0 red, 0 4px red, 4px 0 red, 0 -4px red
 	;
 	margin-top: 4vh;
-	margin-bottom: 4vh;		 
+	margin-bottom: 4vh;
 }
 
 .title > h2 {
@@ -46,4 +46,20 @@ body {
 	width: 80%;
 	height: 40vh;
 	overflow-y: scroll;
+}
+
+#username {
+	position: absolute;
+	top: 2.5vh;
+	text-shadow:	0 0 10px #DFDCE4,
+					10px -10px 10px #DFDCE4,
+					15px -15px 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4
+	;
+	font-size: 40px;
+	margin: 0;
 }
