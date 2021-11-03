@@ -1,5 +1,8 @@
 var flipped = 0;
 var tries = 0;
+var errors = 0;
+var level = 0;
+var advanced = 0;
 var extraCards = 0
 
 // This function contains de logic of the game
@@ -20,7 +23,9 @@ function flip(card){
 			checkWin();
 
 		} else {
+			audioFail();
 			setTimeout("unflipCards(flippedCards)", 2000);
+			errors++;
 		}
 	}
 }
@@ -60,6 +65,7 @@ function cardsSolved(flippedCards){
 		flippedCard.setAttribute('state', 'solved');
 	});
 	flipped = 0;
+	audioGoodPair();
 }
 
 // This function restore the state "unflipped" to an array of cards and their back image
@@ -83,7 +89,9 @@ function checkWin(){
 		createCookie("tries", tries);
 		createCookie("time", maxT);
 		document.getElementById('cardsContainer').setAttribute('class','flash'); //white flash when solved
+		audioCongratulations();
 		setTimeout("window.open('winner.php','_self')",3000);
+
 	}
 }
 
@@ -109,7 +117,7 @@ function createCookie(name, value) {
 // ###############TIMER###############
 
 
-var maxT = 0; //limit time in seconds
+var maxT = 60000; //limit time in seconds
 function setTimer(sec){
 	maxT= sec;
 }
@@ -143,11 +151,14 @@ function secondPasses(){
 	else timer.innerHTML=minS+':'+secS;
 
 	maxT--;
+	printPlayers();
 
 	if (maxT<=0){
 		maxT=0;
 		document.getElementById('cardsContainer').setAttribute('class','redFlash'); //white flash when solved
+
 		setTimeout("window.open('gameOver.php','_self')",3000);
+
 	}
 }
 
@@ -195,6 +206,10 @@ function keyCode(event) {
 
 function validateBtn(input,button){
 	var btn = document.getElementById(button);
+	if (document.getElementById('username')){
+		btn.disabled = false
+		return
+	}
 	if (document.getElementById(input).value.length == 0) {
 		btn.disabled = true;
 
@@ -206,3 +221,69 @@ function validateBtn(input,button){
 	  
 }
 
+
+function audioApplause(){
+	var app = new Audio('../Sounds/applause.wav');
+	app.play();
+}
+
+function audioCongratulations(){
+	var cong = new Audio('../Sounds/congratulations.wav');
+	cong.play();
+}
+function audioGoodPair(){
+	var pair = new Audio('../Sounds/goodPair.wav');
+	pair.play();
+}
+function audioFail(){
+	var fail = new Audio('../Sounds/fail.mp3');
+	fail.play();
+
+}
+function audioYouLose(){
+	var lose = new Audio('../Sounds/youLose.wav');
+	lose.play();
+
+}
+
+// errors = ?;
+// time = ?;
+// level = ?;
+// advanced = ?;
+var bestN;
+var userN;
+var bestP;
+var userP;
+
+function innitJSvars(bestName, bestPoints, userName, gameLevel, gameAdvanced){
+	bestN = bestName;
+	bestP = bestPoints;
+	userN = userName;
+	level = gameLevel;
+	advanced = gameAdvanced;
+}
+
+function printBest(){
+	userP = (10 + ((maxT+5)**(level/2)) - (errors**(1/2) * 5));
+	userP = Math.floor(userP + (1.5 * userP * advanced));
+	if (userP <= 0){
+		userP = 0;
+	}
+	if (bestP>userP) {
+		document.getElementById('best').innerHTML = "THE BEST: "+bestN+" "+bestP+" points";
+	} else {
+		document.getElementById('best').innerHTML = "THE BEST: "+userN+" "+userP+" points";
+	}
+}
+function printUser(){
+	userP = (10 + ((maxT+5)**(level/2)) - (errors**(1/2) * 5));
+	userP = Math.floor(userP + (1.5 * userP * advanced));
+	if (userP <= 0){
+		userP = 0;
+	}
+	document.getElementById('user').innerHTML = "YOU: "+userN+" "+userP+" points";
+}
+function printPlayers(){
+	printBest();
+	printUser();
+}

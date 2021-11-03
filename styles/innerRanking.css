@@ -5,13 +5,12 @@
 	align-items: center;
 	justify-content: space-between;
 	background: linear-gradient(180deg, rgba(21,21,29,1) 0%, rgba(0,0,0,1) 39%, rgba(64,63,83,0.9976365546218487) 93%);
-	height: 50px;
-	font-size: 60px;
+	height: 4.5vh;
+	font-size: 3vw;
 	color: #DFDCE4;
 	border-radius: 5px;
 	margin: 5px;
 	padding: 0 15%;
-	display: flex;
 }
 .player p{
 	margin: 0;
