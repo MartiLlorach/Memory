@@ -102,5 +102,5 @@ p, h2, label {
 }
 
 #username{
-	margin: -0.2vh;
+	display: none;
 }
