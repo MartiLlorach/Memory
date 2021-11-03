@@ -1,5 +1,5 @@
 .card{
-    width: 5vw;
+    width: 4vw;
     height: 14vh;
     display: flex;
     justify-content: center;
@@ -11,6 +11,6 @@
 }
 
 img {
-	width: 5vw;
+	width: 4vw;
 	height: 14vh;
 }
