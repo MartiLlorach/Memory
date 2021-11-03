@@ -2,9 +2,9 @@
 
 // This function take a name and tries ands saves them in HallOfFame.txt, each item is separated by # and each entry by a \n
 
-    function saveResult($name, $level, $time, $errors){
+    function saveResult($name, $level, $time, $errors, $hardcore){
         $hallOfFame = fopen("HallOfFame.txt", "a");
-        $results = $name."#".$level."#".$time."#".$errors."\n";
+        $results = $name."#".$level."#".$time."#".$errors."#".$hardcore."\n";
         fwrite($hallOfFame, $results);
     }
 
@@ -24,7 +24,7 @@
     }
 
     function setPuntuation($game){
-        // game = name + level + time + errors 
+        // game = name + level + time + errors + advanced
         $username = $game[0];
         $level = intval($game[1]);
         $time = intval($game[2]);

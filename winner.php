@@ -10,7 +10,30 @@
 	<?php
 		session_start();
 		include "backendFunctions/functions.php";
-		saveResult($_SESSION["playerName"], $_SESSION["dif"], $_COOKIE['time'], $_COOKIE['tries']-4, $_SESSION["hardcoreMode"]);
+		$pairs;
+		switch($_SESSION["dif"]){
+			case 1:
+				$pairs = 4;
+				break;
+			case 2:
+				$pairs = 6;
+				break;
+			case 3:
+				$pairs = 8;
+				break;
+			case 4:
+				$pairs = 10;
+				break;
+			case 5:
+				$pairs = 15;
+				break;
+			case 6:
+				$pairs = 20;
+				break;
+			
+		}
+
+		saveResult($_SESSION["playerName"], $_SESSION["dif"], $_COOKIE['time'], $_COOKIE['tries']-$pairs, $_SESSION["hardcoreMode"]);
 	?>
 
 	<main>
