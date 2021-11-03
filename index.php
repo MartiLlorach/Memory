@@ -8,7 +8,7 @@
 
 </head>
 
-<body >
+<body onload="validateBtn('playerName', 'btn-primary')">
 	<main>
 
 		<!-- Logo -->
@@ -21,7 +21,19 @@
 
 		<div class="userForm">
 			<form method="POST" action="game.php">
-				<input class="inputField" id="playerName" name="playerName" type="text" placeholder="Your player name" oninput="validateBtn('playerName', 'btn-primary')">
+				<?php session_start();
+					if (isset($_SESSION["playerName"])){
+						echo "<p id='username'>".$_SESSION["playerName"]."</p>";
+						?>
+						<input class='inputField' id='playerName' name='playerName' type='text' value='<?php echo $_SESSION["playerName"] ?>' oninput="validateBtn('playerName', 'btn-primary')">;
+						<?php
+					}	else {
+						?>
+						<input class='inputField' id='playerName' name='playerName' type='text' placeholder='Your player name' oninput="validateBtn('playerName', 'btn-primary')">;
+						<?php
+					}
+				?>
+			
 
 		</div>
 
@@ -31,7 +43,7 @@
 
 			<div class="bottom-left">
 				<div class="nav-buttons">
-					<input type="submit" value="Play" formaction="game.php" class="btn btn-primary" id="btn-primary" disabled="true">
+					<input type="submit" value="Play" formaction="game.php" class="btn btn-primary" id="btn-primary" disabled="true" >
 					<button id="rankButton" class="btn btn-secondary" formaction="ranking.php">Ranking</button>
 				</div>
 					<h2>Difficulty Selector</h2>
@@ -61,7 +73,7 @@
 			</div>
 
 			<!-- Instructions -->
-			
+
 			<div class="bottom-right">
 				<h2>Welcome human, you've stepped into the magical world of Me-Mo-Ry!</h2>
 				<p>To start playing you must press the play button. Once activated you will be able to see a board filled with cards. Your goal is to turn these cards and to find pairs... But be careful! When you don't flip a pair your score will be affected. Your goal is to get all the pairs, while failing the least possible!</p>

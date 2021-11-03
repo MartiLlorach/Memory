@@ -27,7 +27,11 @@
 		<div class="player-input-row">
 
 			<p> Time plays against us.  </p>
-			<p> Try to defeat him next time!</p>
+			<p> Try to defeat him next time, 
+			<?php session_start();
+				echo $_SESSION["playerName"];
+			?>	
+			!</p>
 
 			<!-- The form that manages the action of buttons -->
 

@@ -24,7 +24,30 @@
 	<?php
 		session_start();
 		include "backendFunctions/functions.php";
-		saveResult($_SESSION["playerName"], $_SESSION["dif"], $_COOKIE['time'], $_COOKIE['tries']-4, $_SESSION["hardcoreMode"]);
+		$pairs;
+		switch($_SESSION["dif"]){
+			case 1:
+				$pairs = 4;
+				break;
+			case 2:
+				$pairs = 6;
+				break;
+			case 3:
+				$pairs = 8;
+				break;
+			case 4:
+				$pairs = 10;
+				break;
+			case 5:
+				$pairs = 15;
+				break;
+			case 6:
+				$pairs = 20;
+				break;
+			
+		}
+
+		saveResult($_SESSION["playerName"], $_SESSION["dif"], $_COOKIE['time'], $_COOKIE['tries']-$pairs, $_SESSION["hardcoreMode"]);
 	?>
 	<main>
 		<div class="winner">
@@ -33,8 +56,9 @@
 
 		<div class="player-input-row">
 			<div class="message">
-				<p>Congratulations! You won in <?php echo $_COOKIE["tries"]?> turns!</p>
-				<p>Insert your name to save your score!</p>
+				<p>Congratulations, 
+				<?php echo $_SESSION["playerName"]; ?>
+				! You won in <?php echo $_COOKIE["tries"]?> turns!</p>
 			</div>
 
 			<!-- Buttons to go to all the options -->
