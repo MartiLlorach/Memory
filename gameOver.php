@@ -4,9 +4,22 @@
 	<meta charset="utf-8">
 	<title>Memory - Game Over</title>
 	<link rel="stylesheet" type="text/css" href="./styles/gameOver.css">
+	<link rel="stylesheet" type="text/css" href="./styles/winner.css">
 </head>
 
 <body>
+
+	<?php
+	session_start();
+	unset($_SESSION['gameSave']);
+	?>
+	<script type="text/javascript" src="./js/functions.js"></script>
+	<script type="text/javascript">
+		setTimeout(()=>{
+			audioYouLose();
+		}, 6000)
+	</script>
+
 	<main>
 		<div class="loser">
 			<h1>
@@ -20,7 +33,11 @@
 		<div class="player-input-row">
 
 			<p> Time plays against us.  </p>
-			<p> Try to defeat him next time!</p>
+			<p> Try to defeat him next time, 
+			<?php session_start();
+				echo $_SESSION["playerName"];
+			?>	
+			!</p>
 
 			<!-- The form that manages the action of buttons -->
 

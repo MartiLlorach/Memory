@@ -1,38 +1,67 @@
 @import "general.css";
 
+
 .btn{
 	width: 300px;
 	height: 80px;
 	font-size: 60px;
-	margin-top: 4%;
+	margin-top: 4vh;
+	margin-bottom: 4vh;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -5em;
+;
 }
 
 .mainDiv{
 	width: 60%;
-	height: 40vw;
 	background-color: #33302F;
-	margin: 0px auto 50px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .title {
 	color: transparent;
-	margin: auto;
-	-webkit-text-stroke: 3px black; 
+	-webkit-text-stroke: 3px black;
 	font-family: 'yugioh';
 	font-size: 70px;
 	text-shadow: 10px 0 1px rgba(0, 0, 0, 0.5), 0 0 #C0C0C0,
 				-1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow,
 				-4px 0 red, 0 4px red, 4px 0 red, 0 -4px red
-	;			 
+	;
+	margin-top: 4vh;
+	margin-bottom: 4vh;
 }
-.title h2{
-	padding-top: 20px;
+
+.title > h2 {
+	margin: 0;
 }
 
 .rankingContainer{
 	border: 1px solid black;
 	width: 80%;
-	height: 50%;
-	margin: -50px auto 0 auto;
+	height: 40vh;
 	overflow-y: scroll;
+}
+
+#username {
+	position: absolute;
+	top: 2.5vh;
+	text-shadow:	0 0 10px #DFDCE4,
+					10px -10px 10px #DFDCE4,
+					15px -15px 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4,
+					0 0 10px #DFDCE4
+	;
+	font-size: 40px;
+	margin: 0;
 }
