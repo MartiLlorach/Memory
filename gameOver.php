@@ -8,6 +8,10 @@
 </head>
 
 <body>
+	<?php
+	session_start();
+	unset($_SESSION['gameSave']);
+	?>
 	<main>
 		<div class="loser">
 			<h1>

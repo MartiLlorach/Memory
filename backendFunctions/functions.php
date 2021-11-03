@@ -64,8 +64,12 @@
         }
 
         $cardsArray = cardsSelection($gameTable["columns"], $gameTable["rows"], $hardcore);
-      
-        printCards($cardsArray);
+        if (isset($_SESSION['gameSave'])) {
+            loadCards($_SESSION['gameSave']);
+        }else{
+            printCards($cardsArray);
+        }
+        
 
     }
 
@@ -153,10 +157,13 @@
     // This function prints the cards into the webpage
 
     function printCards($cardsArray) {
-
         while(count($cardsArray) > 0) { 
             $random = rand(0, count($cardsArray)-1);
             $nameCard = $cardsArray[$random][0];
+            if (!isset($_SESSION['gameSave'])) {
+                $_SESSION['gameSave']=[];
+            }
+            array_push($_SESSION['gameSave'],$nameCard);
             echo "
                 <div class='card' name='$nameCard' state='unflipped' onclick='flip(this)'>  
                     <div class='card-inner'>
@@ -175,6 +182,23 @@
             if(count($cardsArray[$random]) == 0) {
                 array_splice($cardsArray, $random, 1);
             }
+        }
+    }
+
+    function loadCards($cardsArray){
+        foreach ($cardsArray as $card) {
+            echo "
+                <div class='card' name='$card' state='unflipped' onclick='flip(this)'>  
+                    <div class='card-inner'>
+                        <div class='card-front'>
+                            <img src='./images/$card.png'>
+                        </div>
+                        <div class='card-back'>
+                            <img src='./images/backCards.jpeg'>
+                        </div>
+                    </div>
+                </div>                      
+                ";
         }
     }
 

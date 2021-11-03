@@ -103,9 +103,9 @@
 		<!-- Card's board -->
 
 		<?php
-
+			
 			generateCards($_SESSION["dif"], $_SESSION["hardcoreMode"]);	
-
+			unset($_SESSION['gameSave']);
 		?>
 	</div>
 
