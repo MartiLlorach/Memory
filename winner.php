@@ -43,8 +43,9 @@
 
 		<div class="player-input-row">
 			<div class="message">
-				<p>Congratulations! You won in <?php echo $_COOKIE["tries"]?> turns!</p>
-				<p>Insert your name to save your score!</p>
+				<p>Congratulations, 
+				<?php echo $_SESSION["playerName"]; ?>
+				! You won in <?php echo $_COOKIE["tries"]?> turns!</p>
 			</div>
 
 			<!-- Buttons to go to all the options -->

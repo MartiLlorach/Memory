@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body >
+<body onload="validateBtn('playerName', 'btn-primary')">
 	<main>
 
 		<!-- Logo -->
@@ -20,6 +20,11 @@
 
 		<div class="userForm">
 			<form method="POST" action="game.php">
+				<?php session_start();
+					if (isset($_SESSION["playerName"])){
+						echo "<p id='username'>".$_SESSION["playerName"]."</p>";
+					}	
+				?> 
 				<input class="inputField" id="playerName" name="playerName" type="text" placeholder="Your player name" oninput="validateBtn('playerName', 'btn-primary')">
 
 		</div>
@@ -30,7 +35,7 @@
 
 			<div class="bottom-left">
 				<div class="nav-buttons">
-					<input type="submit" value="Play" formaction="game.php" class="btn btn-primary" id="btn-primary" disabled="true">
+					<input type="submit" value="Play" formaction="game.php" class="btn btn-primary" id="btn-primary" disabled="true" >
 					<button id="rankButton" class="btn btn-secondary" formaction="ranking.php">Ranking</button>
 				</div>
 					<h2>Difficulty Selector</h2>

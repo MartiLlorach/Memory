@@ -200,6 +200,10 @@ function keyCode(event) {
 
 function validateBtn(input,button){
 	var btn = document.getElementById(button);
+	if (document.getElementById('username')){
+		btn.disabled = false
+		return
+	}
 	if (document.getElementById(input).value.length == 0) {
 		btn.disabled = true;
 
