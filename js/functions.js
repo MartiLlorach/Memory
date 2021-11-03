@@ -223,25 +223,25 @@ function validateBtn(input,button){
 
 
 function audioApplause(){
-	var app = new Audio('../Sounds/applause.wav');
+	var app = new Audio('./Sounds/applause.wav');
 	app.play();
 }
 
 function audioCongratulations(){
-	var cong = new Audio('../Sounds/congratulations.wav');
+	var cong = new Audio('./Sounds/congratulations.wav');
 	cong.play();
 }
 function audioGoodPair(){
-	var pair = new Audio('../Sounds/goodPair.wav');
+	var pair = new Audio('./Sounds/goodPair.wav');
 	pair.play();
 }
 function audioFail(){
-	var fail = new Audio('../Sounds/fail.mp3');
+	var fail = new Audio('./Sounds/fail.mp3');
 	fail.play();
 
 }
 function audioYouLose(){
-	var lose = new Audio('../Sounds/youLose.wav');
+	var lose = new Audio('./Sounds/youLose.wav');
 	lose.play();
 
 }
@@ -265,7 +265,7 @@ function innitJSvars(bestName, bestPoints, userName, gameLevel, gameAdvanced){
 
 function printBest(){
 	userP = (10 + ((maxT+5)**(level/2)) - (errors**(1/2) * 5));
-	userP = Math.floor(userP + (1.5 * userP * advanced));
+	userP = Math.floor(userP + (0.5 * userP * advanced));
 	if (userP <= 0){
 		userP = 0;
 	}
@@ -277,7 +277,7 @@ function printBest(){
 }
 function printUser(){
 	userP = (10 + ((maxT+5)**(level/2)) - (errors**(1/2) * 5));
-	userP = Math.floor(userP + (1.5 * userP * advanced));
+	userP = Math.floor(userP + (0.5 * userP * advanced));
 	if (userP <= 0){
 		userP = 0;
 	}

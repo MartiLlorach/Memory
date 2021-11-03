@@ -31,7 +31,7 @@
         $errors = intval($game[3]);
         $advanced = intval($game[4]);
         $puntuation = (10 + (($time+5)**($level/2)) - ($errors**(1/2) * 5));
-        $puntuation = $puntuation + (1.5 * $puntuation * $advanced);
+        $puntuation = $puntuation + (0.5 * $puntuation * $advanced);
         if ($puntuation<=0) {
             $puntuation = 1;
         }

@@ -34,7 +34,7 @@
 
 			<p> Time plays against us.  </p>
 			<p> Try to defeat him next time, 
-			<?php session_start();
+			<?php
 				echo $_SESSION["playerName"];
 			?>	
 			!</p>

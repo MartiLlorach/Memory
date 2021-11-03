@@ -25,7 +25,7 @@
 
 		<div class="userForm">
 			<form method="POST" action="game.php">
-				<?php session_start();
+				<?php 
 					if (isset($_SESSION["playerName"])){
 						echo "<p id='username'>".$_SESSION["playerName"]."</p>";
 						?>
