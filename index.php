@@ -5,6 +5,7 @@
 	<title>Memory - Main Page</title>
 	<link rel="stylesheet" type="text/css" href="./styles/index.css">
 	<script type="text/javascript" src="js/functions.js"></script>
+
 </head>
 
 <body >
