@@ -9,6 +9,10 @@
 
 <body >
 	<main>
+		<?php
+		session_start();
+		unset($_SESSION['gameSave']);
+		?>
 
 		<!-- Logo -->
 
