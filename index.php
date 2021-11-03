@@ -23,7 +23,7 @@
 				<?php session_start();
 					if (isset($_SESSION["playerName"])){
 						echo "<p id='username'>".$_SESSION["playerName"]."</p>";
-						echo "<input class='inputField' id='playerName' name='playerName' type='text' value=$_SESSION[playerName] oninput=validateBtn('playerName', 'btn-primary')>";
+						echo "<input class='inputField' id='playerName' name='playerName' type='text' value='".$_SESSION[playerName]."' oninput='validateBtn('playerName', 'btn-primary')'\>";
 					}	else {
 						echo "<input class='inputField' id='playerName' name='playerName' type='text' placeholder='Your player name' oninput='validateBtn('playerName', 'btn-primary')'>";
 					}
