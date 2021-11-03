@@ -10,6 +10,10 @@
 
 <body onload="validateBtn('playerName', 'btn-primary')">
 	<main>
+		<?php
+		session_start();
+		unset($_SESSION['gameSave']);
+		?>
 
 		<!-- Logo -->
 
@@ -25,15 +29,15 @@
 					if (isset($_SESSION["playerName"])){
 						echo "<p id='username'>".$_SESSION["playerName"]."</p>";
 						?>
-						<input class='inputField' id='playerName' name='playerName' type='text' value='<?php echo $_SESSION["playerName"] ?>' oninput="validateBtn('playerName', 'btn-primary')">;
+						<input class='inputField' id='playerName' name='playerName' type='text' value='<?php echo $_SESSION["playerName"] ?>' oninput="validateBtn('playerName', 'btn-primary')">
 						<?php
 					}	else {
 						?>
-						<input class='inputField' id='playerName' name='playerName' type='text' placeholder='Your player name' oninput="validateBtn('playerName', 'btn-primary')">;
+						<input class='inputField' id='playerName' name='playerName' type='text' placeholder='Your player name' oninput="validateBtn('playerName', 'btn-primary')">
 						<?php
 					}
 				?>
-			
+
 
 		</div>
 

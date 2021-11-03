@@ -107,9 +107,9 @@
 		<!-- Card's board -->
 
 		<?php
-
+			
 			generateCards($_SESSION["dif"], $_SESSION["hardcoreMode"]);	
-
+			
 		?>
 	</div>
 

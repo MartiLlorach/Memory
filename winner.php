@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-	
+
+
 	<meta charset="utf-8">
 	<title>Memory - Winner</title>
 	<link rel="stylesheet" type="text/css" href="./styles/winner.css">
 	<script type="text/javascript" src="js/functions.js">
-		
+
 	</script>
-	
+
 </head>
 
 <body >
@@ -24,6 +24,9 @@
 	<?php
 		session_start();
 		include "backendFunctions/functions.php";
+		unset($_SESSION['gameSave']);
+
+
 		$pairs;
 		switch($_SESSION["dif"]){
 			case 1:
@@ -44,8 +47,9 @@
 			case 6:
 				$pairs = 20;
 				break;
-			
+
 		}
+
 
 		saveResult($_SESSION["playerName"], $_SESSION["dif"], $_COOKIE['time'], $_COOKIE['tries']-$pairs, $_SESSION["hardcoreMode"]);
 	?>
@@ -56,7 +60,7 @@
 
 		<div class="player-input-row">
 			<div class="message">
-				<p>Congratulations, 
+				<p>Congratulations,
 				<?php echo $_SESSION["playerName"]; ?>
 				! You won in <?php echo $_COOKIE["tries"]?> turns!</p>
 			</div>
@@ -69,7 +73,7 @@
 			</div>
 		</div>
 	</main>
-	
+
 </body>
 
 </html>
