@@ -58,8 +58,12 @@
 		} 
 
 		$orderedPlayers = sortGames();
-		$best = $orderedPlayers[0];
-
+		if ($orderedPlayers){
+			$best = $orderedPlayers[0];
+		} else {
+			$best = ['0','0'];
+		}
+		
 		echo "<script> 
 				setTimer($maxTime);
 				innitJSvars('$best[0]', '$best[1]', '$_SESSION[playerName]','$_SESSION[dif]', '$hardcore');

@@ -23,6 +23,7 @@ function flip(card){
 			checkWin();
 
 		} else {
+			audioFail();
 			setTimeout("unflipCards(flippedCards)", 2000);
 			errors++;
 		}
@@ -64,6 +65,7 @@ function cardsSolved(flippedCards){
 		flippedCard.setAttribute('state', 'solved');
 	});
 	flipped = 0;
+	audioGoodPair();
 }
 
 // This function restore the state "unflipped" to an array of cards and their back image
@@ -87,7 +89,9 @@ function checkWin(){
 		createCookie("tries", tries);
 		createCookie("time", maxT);
 		document.getElementById('cardsContainer').setAttribute('class','flash'); //white flash when solved
+		audioCongratulations();
 		setTimeout("window.open('winner.php','_self')",3000);
+
 	}
 }
 
@@ -152,7 +156,9 @@ function secondPasses(){
 	if (maxT<=0){
 		maxT=0;
 		document.getElementById('cardsContainer').setAttribute('class','redFlash'); //white flash when solved
+
 		setTimeout("window.open('gameOver.php','_self')",3000);
+
 	}
 }
 
@@ -200,6 +206,10 @@ function keyCode(event) {
 
 function validateBtn(input,button){
 	var btn = document.getElementById(button);
+	if (document.getElementById('username')){
+		btn.disabled = false
+		return
+	}
 	if (document.getElementById(input).value.length == 0) {
 		btn.disabled = true;
 
@@ -209,6 +219,31 @@ function validateBtn(input,button){
 
 	}
 	  
+}
+
+
+function audioApplause(){
+	var app = new Audio('../Sounds/applause.wav');
+	app.play();
+}
+
+function audioCongratulations(){
+	var cong = new Audio('../Sounds/congratulations.wav');
+	cong.play();
+}
+function audioGoodPair(){
+	var pair = new Audio('../Sounds/goodPair.wav');
+	pair.play();
+}
+function audioFail(){
+	var fail = new Audio('../Sounds/fail.mp3');
+	fail.play();
+
+}
+function audioYouLose(){
+	var lose = new Audio('../Sounds/youLose.wav');
+	lose.play();
+
 }
 
 // errors = ?;
