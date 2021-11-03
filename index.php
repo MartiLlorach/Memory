@@ -23,9 +23,12 @@
 				<?php session_start();
 					if (isset($_SESSION["playerName"])){
 						echo "<p id='username'>".$_SESSION["playerName"]."</p>";
-					}	
-				?> 
-				<input class="inputField" id="playerName" name="playerName" type="text" placeholder="Your player name" oninput="validateBtn('playerName', 'btn-primary')">
+						echo "<input class='inputField' id='playerName' name='playerName' type='text' value=$_SESSION[playerName] oninput=validateBtn('playerName', 'btn-primary')>";
+					}	else {
+						echo "<input class='inputField' id='playerName' name='playerName' type='text' placeholder='Your player name' oninput='validateBtn('playerName', 'btn-primary')'>";
+					}
+				?>
+
 
 		</div>
 
@@ -65,7 +68,7 @@
 			</div>
 
 			<!-- Instructions -->
-			
+
 			<div class="bottom-right">
 				<h2>Welcome human, you've stepped into the magical world of Me-Mo-Ry!</h2>
 				<p>To start playing you must press the play button. Once activated you will be able to see a board filled with cards. Your goal is to turn these cards and to find pairs... But be careful! When you don't flip a pair your score will be affected. Your goal is to get all the pairs, while failing the least possible!</p>
